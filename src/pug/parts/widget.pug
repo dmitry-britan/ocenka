@@ -5,7 +5,7 @@
 		span.widget__title= title
 	div(class="widget__content "+bgClass)
 		ul.widget__list
-			-var texts = ['Монеты','Часы','Ордена и медали','Банкноты','Столовое серебро','Иконы','Книги','Изделия из янтаря','Коралловые бусы'];
+			-var texts = (texts)?texts:['Монеты','Часы','Ордена и медали','Банкноты','Столовое серебро','Иконы','Книги','Изделия из янтаря','Коралловые бусы'];
 			each text, i in texts
 				-var isActive = (i === 1)?' is--active':'';
 				li(class="widget__list-item"+isActive)

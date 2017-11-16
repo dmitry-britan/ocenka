@@ -30,6 +30,11 @@
 		background-position: right bottom;
 		background-position-x: 200px;
 	}
+	&.is--coin-bg{
+		background-image: url('../images/coin-bg.png');
+		background-repeat: no-repeat;
+		background-position: right bottom;
+	}
 }
 .widget__list{
 	margin: 0;
