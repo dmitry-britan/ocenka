@@ -1,0 +1,31 @@
+.how{
+	max-width: 210px;
+	margin: 0 auto 30px;
+}
+.how__inner{}
+.how__icon{
+	display: block;
+	margin: 0 auto 25px;
+	width: 174px;
+	height: 174px;
+	line-height: 166px;
+	border-radius: 50%;
+	box-shadow: 5px 8px 0 rgba(22, 59, 86, 0.1);
+	border: 4px solid #fff;
+	background-color: #ffd800;
+	text-align: center;
+
+	img{
+		vertical-align: middle;
+	}
+}
+.how__text{
+	display: block;
+	margin: 0;
+	text-shadow: 5px 8px 5px rgba(22, 59, 86, 0.27);
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 21px;
+	color: #fff;
+	text-align: center;
+}

@@ -1,0 +1,40 @@
+.slider{
+  position: relative;
+  
+  @include media('<1230px'){
+    max-width: 870px;
+    margin: 0 auto;
+  }
+}
+.slider__inner{
+  overflow: hidden;
+  position: relative;
+  padding: 0 30px 70px;
+  margin: 0 14px;
+
+  .bx-wrapper .bx-viewport{
+    overflow: visible!important;
+  }
+}
+.slider__controls{
+  position: absolute;
+  left: 0; right: 0;
+  top: 50%;
+  width: 100%;
+  margin-top: -70px;
+}
+.slider__next,
+.slider__prev{
+  position: absolute;
+  cursor: pointer;
+  a {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+}
+.slider__next{
+  right: 0;
+}
+.slider__prev{
+  left: 0;
+}

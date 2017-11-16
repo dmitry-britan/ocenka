@@ -1,0 +1,15 @@
+-var title = ['25 рублей 1852 года','Орден “За храбрость” 1852 года','Серебренный набор стаканов'];
+-var text = ['«Спасибо! Удачно продал купюру! Покупатель надежный»','«Сделка прошла успешно, покупатель надежный. Рекомендую.»','«Здравствуйте! деньги получила! Всем советую сотрудничать! »'];
+-var author = ['Кассина Екатерина','Егор','ket1991'];
+.row
+	each k in [0,1,2]
+		each i in [0,1,2]
+			.col.col--4-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
+				article.testimonial
+					.testimonial__inner
+						.testimonial__photo
+							img(src="images/testimonials/p-"+(i+1)+".png", alt="")
+						.testimonial__content
+							h4.testimonial__title= title[i]
+							p.testimonial__text= text[i]
+							.testimonial__author= author[i]

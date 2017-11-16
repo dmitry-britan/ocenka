@@ -1,0 +1,62 @@
+@mixin column() {
+  display: inline-block;
+	padding-left: $rowGutter*2;
+	box-sizing: border-box;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin huge {
+
+  @include media('screen','<huge') {
+    @content;
+  }
+
+}
+@mixin pc {
+
+  @include media('screen','<pc') {
+    @content;
+  }
+
+}
+
+@mixin note {
+
+  @include media('screen','<note') {
+    @content;
+  }
+
+}
+
+@mixin tablet {
+
+  @include media('screen','<tablet') {
+    @content;
+  }
+
+}
+
+@mixin small {
+
+  @include media('screen','<small') {
+    @content;
+  }
+
+}
+
+@mixin phone {
+
+  @include media('screen','<phone') {
+    @content;
+  }
+
+}

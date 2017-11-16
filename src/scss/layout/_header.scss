@@ -1,0 +1,117 @@
+.header{
+	position: relative;
+	z-index: 50;
+	height: 88px;
+	padding-top: 25px;
+	box-shadow: 0 4px 9px rgba(39, 42, 59, 0.1);
+}
+.header__inner{
+	max-width: 1860px;
+	margin: 0 auto;
+	// display: flex;
+	// flex-direction: row;
+	@include media('<1250px'){
+		text-align: center;
+	}
+
+	& > div {
+		display: inline-block;
+		// margin-right: -0.25em;
+		vertical-align: top;
+		margin-right: 0;
+		transition: width, padding, 250ms linear;
+	}
+}
+.header__logo{
+	// padding-right: 97px;
+	// padding-left: 110px;
+	padding-left: percentage(110/1860);
+	padding-right: percentage(97/1860);
+	@include media('<1860px'){
+		padding-left: percentage(50/1860);
+	}
+	@include media('<1800px'){
+		padding-right: percentage(40/1860);
+	}
+	@include media('<1250px'){
+		float: left;
+	}
+	@include media('<992px'){
+		padding: 0 20px 0 40px;
+	}
+	@include media('<550px'){
+		float: none;
+		padding-left: 0;
+	}
+	@include media('<390px'){
+		padding-right: 10px;
+		max-width: 150px;
+	}
+}
+.header__search{
+	// width: 647px;
+	// padding-right: 99px;
+	width: percentage(597/1860);
+	padding-right: percentage(49/1860);
+	margin-top: -6px;
+	@include media('<1780px'){
+		width: percentage(547/1860);
+	}
+	@include media('<1565px'){
+		width: percentage(500/1860);
+		padding-right: percentage(40/1860);
+	}
+	@include media('<1380px'){
+		width: percentage(400/1860);
+		padding-right: percentage(40/1860);
+	}
+	@include media('<992px'){
+		width: 240px;
+		padding: 0 20px 0 0;
+	}
+	@include media('<768px'){
+		display: none!important;
+	}
+}
+.header__phone{
+	padding-right: 16px;
+	margin-top: -6px;
+	@include media('<992px'){
+		display: none!important;
+	}
+}
+.header__action{
+	width: 218px;
+	padding-right: 7px;
+	margin-top: -6px;
+	@include media('<1250px'){
+		display: none!important;
+	}
+}
+.header__social{
+	padding-right: 24px;
+	margin-top: -6px;
+	@include media('<550px'){
+		float: right;
+		padding-right: 10px;
+	}
+}
+.header__menu{
+	margin-top: 3px;
+	@include media('<1380px'){
+		float: right;
+		padding-right: percentage(40/1860);
+	}
+	@include media('<992px'){
+		padding-right: 40px;
+	}
+	@include media('<550px'){
+		float: left;
+		padding-left: 40px;
+		padding-right: 20px;
+	}
+	@include media('<390px'){
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}

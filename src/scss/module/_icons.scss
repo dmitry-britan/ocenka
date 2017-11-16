@@ -1,0 +1,24 @@
+.icon-search{
+	@include sprite('search');
+}
+.icon-mail{
+	@include sprite('mail');
+}
+.icon-viber{
+	@include sprite('viber');
+}
+.icon-telegram{
+	@include sprite('telegram');
+}
+.icon-whatsup{
+	@include sprite('whatsup');
+}
+.icon-arr-left{
+	@include sprite('arr-left');
+}
+.icon-arr-right{
+	@include sprite('arr-right');
+}
+.icon-arrow-down{
+	@include sprite('arrow-down');
+}

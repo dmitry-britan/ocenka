@@ -1,0 +1,16 @@
+.content{
+	padding: 44px 67px;
+	box-shadow: 0 11px 13px rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+.content__header{
+	margin: 0 0 45px;
+	font-size: 42px;
+	font-weight: 900;
+	line-height: 45px;
+	color: $color__secondary;
+	&.is--center{
+		text-align: center;
+	}
+}

@@ -1,0 +1,31 @@
+.search{
+	position: relative;
+}
+.search__input[type=text],
+.search__input[type=search]{
+	display: block;
+	width: 100%;
+	padding: 10px 40px 10px 10px;
+	font-size: 16px;
+	line-height: 21px;
+	border-radius: 5px;
+	border: 1px solid #b9b9b9;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	text-align: left;
+}
+.search__submit{
+	position: absolute;
+	top: 0; right: 0;
+	width: 40px; height: 41px;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: transparent;
+	text-align: center;
+	text-indent: -7px;
+
+	i{
+		vertical-align: middle;
+	}
+}

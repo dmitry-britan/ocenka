@@ -1,0 +1,35 @@
+.social{}
+.social__link{
+	display: inline-block;
+	margin-right: 12px;
+	margin-bottom: 10px;
+	border-radius: 12px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	color: #ffffff;
+
+	&.is--no-shadow{
+		box-shadow: none;
+	}
+	&:last-child{
+		margin-right: 0;
+	}
+}
+.social__text{
+	margin: 0 0 10px;
+	font-size: 12px;
+	font-weight: 100;
+	font-style: italic;
+	line-height: 14px;
+	color: #484848;
+	text-align: center;
+	
+	@include media('<992px'){
+		text-align: left;
+	}
+}
+.social__telegram,
+.social__mail{
+	@include media('<550px'){
+		display: none;
+	}
+}

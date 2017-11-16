@@ -1,0 +1,17 @@
+.view-toggle{
+	position: relative;
+}
+.view-toggle__content{
+	overflow: hidden;
+	max-height: 396px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.view-toggle__action{
+	position: absolute;
+	left: 0; right: 0; bottom: 12px;
+	background: #fff;
+	box-shadow: 0 0px 88px 88px #fff;
+	text-align: center;
+}

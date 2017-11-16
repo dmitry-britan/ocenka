@@ -1,0 +1,35 @@
+.why{
+	margin-bottom: 30px;
+}
+.why__inner{
+	position: relative;
+	background: url('../images/why-item-bg.png') center 8px no-repeat;
+	text-align: center;
+}
+.why__icon{
+	min-height: 120px;
+	margin: 0 0 14px;
+	img{
+		display: block;
+		margin: 0 auto;
+	}
+}
+.why__title{
+	overflow: hidden;
+	height: 32px;
+	max-width: 175px;
+	margin: 0 auto 13px;
+	font-size: 16px;
+	font-weight: 900;
+	line-height: 16px;
+	color: #000;
+}
+.why__text{
+	max-width: 175px;
+	margin: 0 auto;
+	font-family: $font-family-secondary;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 16px;
+	color: rgba(#0f82a9, .8);
+}

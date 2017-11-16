@@ -1,0 +1,85 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--index')
+
+block content
+  section.section.section--promo
+    .container.is--huge
+      .row
+        .col.col--7-of-12.col--s-12-of-12.col--m-12-of-12.col--l-7-of-12
+          .row
+            .col.col--7-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+              .section__header-huge Оценка и покупка антиквариата по самым высоким ценам
+              .section__action
+                a(href="").btn-special Смотреть видео
+          .block
+            p.block__subheader.is--big Оценка производиться по всей Украине
+            h3.block__header.is--big У нас вы можете оценить
+              br
+              | и продать антиквариат:
+        .col.col--5-of-12.col--s-12-of-12.col--m-12-of-12.col--l-5-of-12
+          -var className = " is--left is--decorated";
+          include pug/parts/valuation-2.pug
+
+      -var menuItems = ['Монеты','Часы','Ордена и медали','Банкноты',' Столовое серебро','Иконы','Книги','Изделия из янтаря','Коралловые бусы'];
+      nav.groups
+        ul.groups__list
+          each menuItem, i in menuItems
+            li.groups__item
+              a(href="").groups__link
+                img(src="images/menu/m-"+(i+1)+".png", alt="")
+                span= menuItem
+  section.section.section--estimate
+    .container.is--narrow
+      h2.section__header.is--simple
+        | Как мы оцениваем 
+        br
+        | Ваш антиквариат
+      .row
+        .col.col--8-of-12.col--s-12-of-12.col--m-12-of-12.col--l-8-of-12.is--text-right
+          img(src="images/video.png", alt="", style="max-width: 100%;")
+        .col.col--4-of-12.col--s-12-of-12.col--m-12-of-12.col--l-4-of-12
+          .block
+            .block__subheader.is--big.is--underline Вы еще не рашили где оценить свой антикваиат?
+            .block__text.is--margin Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании
+            .block__action
+              a(href="").btn-primary.is--md Задать вопрос
+  section.section.section--why
+    .container
+      .row
+        .block.is--mb
+          .col.col--5-of-12.col--s-12-of-12.col--m-12-of-12.col--l-5-of-12
+              p.block__subheader.is--big Вы еще не рашили где оценить свой антикваиат?
+              h3.block__header.is--big Почему обращаться лучше к нам!
+          .col.col--7-of-12.col--s-12-of-12.col--m-12-of-12.col--l-7-of-12
+            p.block__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия
+      include pug/index/why.pug
+  section.section.section--testimonials
+    .container.is--huge
+      h2.section__header Отзывы
+      p.section__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+      .view-toggle
+        .view-toggle__content
+          include pug/parts/testimonial.pug
+        .view-toggle__action
+          .btn-bordered--alt Еще отзывы
+
+  section.section.section--how-we-works
+    .container
+      h2.section__header.section__header--alt Как мы работаем
+      include pug/parts/how.pug
+  section.section.section--works.is--no-shadow
+    .container
+      h2.section__header Последни антиквариат оцененый нами
+      .slider
+        .slider__inner
+          .js-slider-antiques
+            include pug/parts/antiques.pug
+        .slider__controls
+          .slider__prev
+            i.icon-arr-left
+          .slider__next
+            i.icon-arr-right
+
+block body-end

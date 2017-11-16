@@ -1,0 +1,18 @@
+extends pug/base
+
+append vars
+	- html.classList.push('page--contacts')
+block content
+	section.section.section--bg-1
+		.container
+			main.main
+				.content
+					h2.content__header.is--center Блог
+					each i in [1,2,3,4]
+						article.post
+							a(href="post.html").post__photo
+								img(src="images/post/p-"+i+".jpg", alt="")
+							h3.post__title: a(href="post.html") Монеты в Киеве
+							p.post__text Всем известна ситуация, когда находишь старые монеты и не знаешь, что с ними делать. С одной стороны, они не нужны, а с другой — вдруг представляют ценность? Вы всегда можете продать монеты в Киеве нашей фирме. Мы осуществляем бесплатную оценку нумизматического материала и даем за него хорошую цену.
+
+block body-end

@@ -1,0 +1,16 @@
+-var title = ['Копейка 1707 г.','Орден “Победа”','Марка Николай','Кораловые бусы'];
+-var desc = ['Состояние экземпляра: VF (Very Fine)','Состояние экземпляра: VF (Very Fine)','Состояние экземпляра: VF (Very Fine)','Состояние экземпляра: VF (Very Fine)'];
+-var price = ['5 400','12 800','3 400','8 200'];
+	each k in [0, 1]
+		each i in [0, 1, 2, 3]
+			article.antiques
+				.antiques__inner
+					a(href="").antiques__photo
+						img(src="images/antiques/p-"+(i+1)+".png", alt="")
+					h3.antiques__title
+						a(href="")= title[i]
+					p.antiques__desc= desc[i]
+					.antiques__price 
+						| Оценка:  
+						span= price[i]
+						| грн.

@@ -1,0 +1,33 @@
+.post{
+	margin-bottom: 20px;
+	padding: 0 4px;
+}
+.post__photo{
+	display: block;
+	margin-bottom: 20px;
+	img{
+		display: block;
+		max-width: 100%;
+	}
+}
+.post__title{
+	font-size: 24px;
+	font-weight: 900;
+	line-height: 30px;
+	color: $color__secondary;
+	margin: 0 0 16px;
+	a{
+		font-size: 24px;
+		font-weight: 900;
+		line-height: 30px;
+		color: $color__secondary;
+		text-decoration: none;
+	}
+}
+.post__text{
+	margin: 0 0 15px;
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 21px;
+	color: #55636e;
+}

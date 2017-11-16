@@ -1,0 +1,39 @@
+.footer-menu{
+	margin-bottom: 30px;
+	&.is--no-title{
+		padding-top: 60px;
+	}
+}
+.footer-menu__title{
+	margin: 0 0 35px;
+	font-size: 24px;
+	font-weight: 900;
+	line-height: 26px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.footer-menu__list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.footer-menu__item,
+.footer-menu__link{
+	padding-bottom: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	span{
+		text-transform: none;
+	}
+}
+.footer-menu__link{
+	display: block;
+	padding: 0;
+	&:hover{
+		text-decoration: underline;
+	}
+}

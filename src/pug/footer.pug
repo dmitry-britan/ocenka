@@ -1,0 +1,44 @@
+section.section.section--feedback
+  .container
+    .row
+      .col.col--8-of-12.col--s-12-of-12.col--m-12-of-12.col--l-8-of-12
+        .block
+          p.block__subheader И так, Вы теперь знаете как можно 
+            br
+            | бесплатно оценить Ваши антикварые предметы!
+          h3.block__header Для быстрой оценки вашего 
+            br
+            | антиквариата заполните форму!
+          // Contact Block
+          .contact-row
+            .contact-row__block
+              h3.contact-row__block-title Наш адрес:
+              ul.contact-row__block-list
+                li.contact-row__list-item Киев, м. Театральная
+                li.contact-row__list-item ул. Театральная, 8
+
+            .contact-row__block
+              h3.contact-row__block-title Контактные телефоны:
+              ul.contact-row__block-list
+                li.contact-row__list-item (095) 51 14 498
+                li.contact-row__list-item (093) 75 91 553
+                li.contact-row__list-item (096) 83 84 606
+
+            .contact-row__block
+              h3.contact-row__block-title Месенджеры:
+              .social
+                a(href="").social__link
+                  i.icon-viber
+                a(href="").social__link
+                  i.icon-telegram
+                a(href="").social__link
+                  i.icon-whatsup
+                p.social__text нажмите на иконку для ого, чтобы оцеить антиквариат через месенджер
+      .col.col--4-of-12.col--s-12-of-12.col--m-12-of-12.col--l-4-of-12
+        include parts/valuation.pug
+
+// FOOTER
+footer.footer
+  .container
+  include parts/map.pug
+// /FOOTER

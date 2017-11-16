@@ -1,0 +1,37 @@
+.valuation.is--negative-margin
+	.valuation__header
+		| Оценка антиквариата 
+		span по фото
+	.valuation__content
+		form.valuation__form
+			.valuation__step
+				.valuation__step-title 1. Загрузите фото антиквариата
+				.valuation__form-field
+					.valuation__upload
+						label(for='file-1').valuation__upload-img
+							img(src="images/upload.png", alt="", data-upload="file-1")
+						input#file-1.valuation__upload-file(type='file', name='file-1')
+						label(for='file-1').valuation__upload-label фото 1
+						
+					.valuation__upload
+						label(for='file-2').valuation__upload-img
+							img(src="images/upload.png", alt="", data-upload="file-2")
+						input#file-2.valuation__upload-file(type='file', name='file-2')
+						label(for='file-2').valuation__upload-label фото 2
+						
+					.valuation__upload
+						label(for='file-3').valuation__upload-img
+							img(src="images/upload.png", alt="", data-upload="file-3")
+						input#file-3.valuation__upload-file(type='file', name='file-3')
+						label(for='file-3').valuation__upload-label фото 3
+			.valuation__step.is--gray
+				.valuation__step-title 2. Оставьте контактные данные
+				.valuation__form-field
+					input(type="text", name="", placeholder="Имя")
+				.valuation__form-field
+					input(type="tel", name="", placeholder="Телефон")
+				.valuation__form-field
+					input(type="email", name="", placeholder="Email")
+				.valuation__step-text После отправки заявки наоценку течении дня с вами свяжеться наш эксперт
+				.valuation__action
+					a(href="").btn-primary Получить цену

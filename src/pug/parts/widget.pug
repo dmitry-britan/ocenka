@@ -1,0 +1,15 @@
+-var title = (title) ? title : 'Оценка антиквариата';
+-var bgClass = (bgClass) ? bgClass : '';
+.widget
+	.widget__header
+		span.widget__title= title
+	div(class="widget__content "+bgClass)
+		ul.widget__list
+			-var texts = ['Монеты','Часы','Ордена и медали','Банкноты','Столовое серебро','Иконы','Книги','Изделия из янтаря','Коралловые бусы'];
+			each text, i in texts
+				-var isActive = (i === 1)?' is--active':'';
+				li(class="widget__list-item"+isActive)
+					-if (i === 1){
+						i.icon-arrow-down
+					-}
+					a(href="").widget__list-link= text

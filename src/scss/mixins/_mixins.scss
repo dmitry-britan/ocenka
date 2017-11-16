@@ -1,0 +1,36 @@
+@mixin triangle($size, $color, $direction: 'up') {
+  width: 0;
+  height: 0;
+
+  @if $direction == 'up' { 
+    border-right: $size solid transparent;
+    border-bottom: $size * 1.732 solid $color; 
+    border-left: $size solid transparent; 
+  } @else if $direction == 'down' {
+    border-top: $size * 1.732 solid $color; 
+    border-right: $size solid transparent; 
+    border-left: $size solid transparent; 
+  } @else if $direction == 'left' {
+    border-top: $size solid transparent; 
+    border-right: $size * 1.732 solid $color; 
+    border-bottom: $size solid transparent; 
+  } @else if $direction == 'right' {
+    border-top: $size solid transparent; 
+    border-bottom: $size solid transparent; 
+    border-left: $size * 1.732 solid $color; 
+  }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@mixin row {
+	@extend .row;
+}
+@mixin col {
+  @extend .col;
+}

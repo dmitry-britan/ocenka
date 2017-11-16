@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+body{
+  font-family: $font-family;
+}
+.container{
+  min-width: 320px;
+  // max-width: 1170px;
+  max-width: 1190px;
+	margin: 0 auto;
+  padding: 0 15px;
+  @include clearfix();
+  &.is--huge{
+    max-width: 1670px;
+  }
+  &.is--narrow{
+    max-width: 1110px;
+  }
+  
+  // @include pc {
+  //   max-width: 970px;
+  // }
+
+  // @include note {
+  //   max-width: 750px;
+  // }
+
+  // @include tablet {
+  //   max-width: 480px;
+  // }
+
+  // @include small {
+  //   max-width: 90%;
+  // }
+
+  // @include phone {
+  //   width: 100%;
+  // }
+
+}
+.is--text-right{
+  text-align: right;
+}
+.is--no-padding{
+  padding: 0;
+}

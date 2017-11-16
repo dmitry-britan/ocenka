@@ -1,0 +1,13 @@
+@include font-face("FontAwesome", "../fonts/FontAwesome");
+@include font-face("Museo Sans", "../fonts/MuseoSansCyrl-100", 100);
+@include font-face("Museo Sans", "../fonts/MuseoSansCyrl-100Italic", 100, italic);
+@include font-face("Museo Sans", "../fonts/MuseoSansCyrl-300", 300);
+@include font-face("Museo Sans", "../fonts/MuseoSansCyrl-300Italic", 300, italic);
+@include font-face("Museo Sans", "../fonts/MuseoSansCyrl-500", 500);
+@include font-face("Museo Sans", "../fonts/MuseoSansCyrl-500Italic", 500, italic);
+@include font-face("Museo Sans", "../fonts/MuseoSansCyrl-700", 700);
+@include font-face("Museo Sans", "../fonts/MuseoSansCyrl-900", 900);
+@include font-face("Museo Sans", "../fonts/MuseoSansCyrl-900Italic", 900, italic);
+@include font-face("Circe", "../fonts/Circe-Regular", 400);
+@include font-face("Circe", "../fonts/Circe-Light", 300);
+@import 'module/font-awesome-4.7.0/scss/font-awesome';

@@ -1,0 +1,38 @@
+include parts/mobile-nav.pug
+header.header
+	.header__inner
+		.header__logo
+			a.logo
+				img(src="images/logo.png", alt="")
+		.header__search
+			form.search
+				input(type="search").search__input
+				button(type="submit").search__submit
+					i.icon-search
+		.header__phone
+			.phone
+				.row
+					.col.col--6-of-12.col--s-12-of-12
+						a(href="").phone__number (095) 511  44 98
+					.col.col--6-of-12.col--s-12-of-12
+						a(href="").phone__number (093) 759  15 53
+					.col.col--6-of-12.col--s-12-of-12
+						a(href="").phone__number (096) 838 46 06
+					.col.col--6-of-12.col--s-12-of-12
+						a(href="") ocenka.pokupka@gmail.com
+
+		.header__action
+			a(href="").btn-bordered Заказать звонок
+		.header__social
+			.social
+				a(href="").social__link.social__mail.is--no-shadow
+					i.icon-mail
+				a(href="").social__link.social__viber
+					i.icon-viber
+				a(href="").social__link.social__telegram
+					i.icon-telegram
+				a(href="").social__link.social__whatsup
+					i.icon-whatsup
+		.header__menu
+			.js-nav-toggle.mobile-nav__toggle
+				span.icon-nav toggle menu

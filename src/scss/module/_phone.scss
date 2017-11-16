@@ -1,0 +1,21 @@
+.phone {
+	max-width: 350px;
+	line-height: 24px;
+}
+.phone a{
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 20px;
+	color: #ff4b55;
+	text-decoration: none;
+}
+.phone .phone__number{
+	font-family: $font-family;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 24px;
+	color: #6a6a6a;
+}
