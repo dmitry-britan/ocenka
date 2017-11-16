@@ -69,17 +69,7 @@ block content
     .container
       h2.section__header.section__header--alt Как мы работаем
       include pug/parts/how.pug
-  section.section.section--works.is--no-shadow
-    .container
-      h2.section__header Последни антиквариат оцененый нами
-      .slider
-        .slider__inner
-          .js-slider-antiques
-            include pug/parts/antiques.pug
-        .slider__controls
-          .slider__prev
-            i.icon-arr-left
-          .slider__next
-            i.icon-arr-right
+
+  include pug/section/last-antiques.pug
 
 block body-end

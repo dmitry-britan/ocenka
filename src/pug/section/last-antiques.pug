@@ -1,0 +1,13 @@
+-var className = (className)?className:'section--works is--no-shadow';
+section(class="section "+className)
+	.container
+		h2.section__header Последни антиквариат оцененый нами
+		.slider
+			.slider__inner
+				.js-slider-antiques
+					include ../parts/antiques.pug
+			.slider__controls
+				.slider__prev
+					i.icon-arr-left
+				.slider__next
+					i.icon-arr-right
