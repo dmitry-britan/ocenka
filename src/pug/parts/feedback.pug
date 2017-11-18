@@ -1,0 +1,36 @@
+form.feedback.form
+	.feedback__inner
+		.feedback__header Оставить отзыв
+		.row
+			.col.col--6-of-12.col--s-12-of-12
+				.form__field
+					input(type="text", placeholder="Назваие предмета")
+			.col.col--6-of-12.col--s-12-of-12
+				.form__field
+					input(type="text", placeholder="Ваше имя")
+			.col.col--12-of-12.col--s-12-of-12
+				.form__field
+					textarea(name="", cols="30", rows="10", placeholder="Ваш отзыв")
+		.row
+			.col.col--6-of-12.col--s-12-of-12
+				.form__text 1. Загрузите фото антиквариата
+				.form__field
+					.form__upload
+						label(for='feedback-file-11').form__upload-img
+							img(src="images/upload.png", alt="", data-upload="feedback-file-11")
+						input#feedback-file-11.form__upload-file(type='file', name='feedback-file-11')
+						label(for='feedback-file-11').form__upload-label фото 1
+						
+					.form__upload
+						label(for='feedback-file-12').form__upload-img
+							img(src="images/upload.png", alt="", data-upload="feedback-file-12")
+						input#feedback-file-12.form__upload-file(type='file', name='feedback-file-12')
+						label(for='feedback-file-12').form__upload-label фото 2
+						
+					.form__upload
+						label(for='feedback-file-13').form__upload-img
+							img(src="images/upload.png", alt="", data-upload="feedback-file-13")
+						input#feedback-file-13.form__upload-file(type='file', name='feedback-file-13')
+						label(for='feedback-file-13').form__upload-label фото 3
+			.col.col--6-of-12.col--s-12-of-12.feedback__action
+				button(type="submit").btn-secondary Оставить отзыв

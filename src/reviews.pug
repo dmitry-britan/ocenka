@@ -1,0 +1,36 @@
+extends pug/base
+
+append vars
+	- html.classList.push('page--reviews')
+block content
+	section.section.section--bg-1
+		.container
+			.row
+				main.main.col.col--9-of-12.col--s-12-of-12.col--m-9-of-12
+					.content.is--have-next
+						h2.content__header.is--center Отзывы
+						include pug/parts/review.pug
+						include pug/parts/pagination.pug
+					.content.is--gray.is--have-prev
+						include pug/parts/feedback.pug
+
+				aside.sidebar.col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.is--no-padding
+					-var bgClass = 'is--text-bg';
+					include pug/parts/widget.pug
+										
+					include pug/parts/valuation-2.pug
+
+					.widget
+						h3.title.is--text-center 
+							| Как мы оцениваем 
+							br
+							|Ваш антиквариат
+						.widget__content.is--long-shadow.is--no-padding
+							.js-video
+								iframe(src="https://www.youtube.com/embed/gFY6Ch6Ajb0" frameborder="0" allowfullscreen)
+block body-end
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js')
+	script.
+		$(document).ready(function(){
+			$(".js-video").fitVids();
+		});

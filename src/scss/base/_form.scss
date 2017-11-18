@@ -54,7 +54,10 @@ textarea{
   border-radius: 5px;
   border: 1px solid #d7d7d7;
   background-color: #fff;
-  text-align: center;
+
+  &.is--center{
+    text-align: center;
+  }
 
   &.error{
     border-color: #ec0202;
@@ -126,15 +129,6 @@ textarea{
   text-align: center;
   color: $color__primary;
 }
-.form__content{}
-.form__action{
-  padding-top: 10px;
-  text-align: center;
-  .btn + .btn { margin-left: 20px; }
-  @include small {
-    .btn + .btn { margin-left: 0; margin-top: 20px; }
-  }
-}
 .form__field{
   position: relative;
   width: 100%;
@@ -142,12 +136,11 @@ textarea{
   
   &.is--required{
     &:after{
-      content: '';
+      content: '*';
       position: absolute;
       top: 5px; right: 8px;
+      color: red;
       z-index: 10;
-
-      //@include sprite($i-red-star);
     }
   }
 
@@ -188,30 +181,6 @@ textarea{
     background:transparent;
   }
 }
-.form__field--calendar{
-  position: relative;
-  background:#fff;
-  z-index: 2;
-  &:after {
-    content: '';
-    // @include sprite(calendar);
-    position: absolute;
-    right: 12px; top: 17px;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    right: 50px; top: 0;
-    bottom: 0;
-    width: 1px;
-    background:#b7b7b7;
-  }
-
-  input {
-    padding-right: 50px;
-  }
-}
-
 // FORM INPUT - SELECT - TEXTAREA
 .input,
 .select,
@@ -338,6 +307,28 @@ textarea{
     }
   }
   span{}
+}
+.form__text{
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #000000;
+  &.is--center{
+    text-align: center;
+  }
+}
+.form__upload{
+  @extend .valuation__upload;
+}
+.form__upload-img{
+  @extend .valuation__upload-img;
+}
+.form__upload-file{
+  @extend .valuation__upload-file;
+}
+.form__upload-label{
+  @extend .valuation__upload-label;
 }
 
 

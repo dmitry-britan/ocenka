@@ -11,17 +11,14 @@
 	@include clearfix();
 }
 .testimonial__photo{
-	// width: 191px;
 	width: percentage(191/460);
 	float: left;
-	// margin-right: 20px;
 	img{
 		display: block;
 		max-width: 100%;
 	}
 }
 .testimonial__content{
-	// margin-left: 211px;
 	margin-left: percentage(211/460);
 }
 .testimonial__title{

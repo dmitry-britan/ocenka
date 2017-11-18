@@ -1,0 +1,14 @@
+.feedback{}
+.feedback__inner{}
+.feedback__header{
+	margin: 0 0 30px;
+	font-size: 32px;
+	font-weight: 900;
+	line-height: 35px;
+	color: $color__secondary;
+	text-align: center;
+}
+.feedback__action{
+	padding-top: 35px;
+	text-align: right;
+}

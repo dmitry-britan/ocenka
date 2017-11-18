@@ -35,6 +35,12 @@
 		background-repeat: no-repeat;
 		background-position: right bottom;
 	}
+	&.is--long-shadow{
+		box-shadow: 1px 26px 35px 1px rgba(27, 28, 35, 0.28);
+	}
+	&.is--no-padding{
+		padding: 0;
+	}
 }
 .widget__list{
 	margin: 0;

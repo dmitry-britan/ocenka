@@ -43,6 +43,17 @@
 		margin: 0 auto;
 	}
 }
+.btn-secondary{
+	padding: 11px 40px;
+	border-radius: 5px;
+	border: 1px solid #d7d7d7;
+	background-color: $color__secondary;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 21px;
+	color: #fff;
+	text-align: center;
+}
 .btn-special {
 	display: inline-block;
 	position: relative;

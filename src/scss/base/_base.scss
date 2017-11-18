@@ -48,6 +48,9 @@ body{
 .is--text-right{
   text-align: right;
 }
+.is--text-center{
+  text-align: center;
+}
 .is--no-padding{
   padding: 0;
 }
@@ -56,6 +59,13 @@ h1,h2,h3,h4,h5,h6{
   margin: 0 0 16px;
   font-weight: 900;
 	color: $color__secondary;
+}
+.title{
+  margin: 0 0 15px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  color: $color__secondary;
 }
 p{
 	margin: 0 0 15px;
