@@ -1,0 +1,44 @@
+extends pug/base
+
+append vars
+	- html.classList.push('page--product')
+block content
+	section.section.section--bg-1
+		.container
+			.row
+				main.main.col.col--9-of-12.col--s-12-of-12.col--m-9-of-12
+					.content
+						.product
+							.product__photos
+							.product__content
+								h1.product__title Старинная монета “1 червонец 1701 года”
+								ul.product__properties
+									li
+										span Года использоавания:
+										| 1701
+									li
+										span Материал: 
+										| Золото
+									li
+										span Вес (грамм):
+										| 3,47 г.
+									li
+										span Тираж:
+										| Неизвестно
+									li
+										span Гурт:
+										| Гладкий
+									li
+										span Правительство:
+										| Петр 1
+								.product__action
+									a(href="").btn-primary Оценить мою монету
+
+				aside.sidebar.col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.is--no-padding
+					-var title = 'Монеты';
+					-var texts = ['Золотые монеты','Серебрянные  монеты','Медные монеты','Юбилейные монеты','Другие монеты'];
+					-var bgClass = 'is--coin-bg';
+					include pug/parts/widget.pug
+
+
+block body-end

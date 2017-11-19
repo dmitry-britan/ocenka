@@ -1,0 +1,31 @@
+.product{}
+.product__title{
+	margin: 0 0 20px;
+	font-size: 20px;
+	font-weight: 900;
+	line-height: 24px;
+	color: #000000;
+}
+.product__photos{}
+.product__photo{}
+.product__thumbs{}
+.product__content{}
+.product__desc{}
+.product__price{}
+.product__properties{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	font-weight: 100;
+	line-height: 24px;
+	color: #4c4c4c;
+	span{
+		float: left;
+		width: 160px;
+		font-size: 12px;
+		font-weight: 100;
+		line-height: 24px;
+		color: rgba(#4c4c4c,.5);
+	}
+}
