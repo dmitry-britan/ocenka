@@ -10,6 +10,11 @@ block content
 					.content
 						.product
 							.product__photos
+								a(href="").product__photo
+									img(src="images/product/p-1.jpg", alt="")
+								ul.product__thumbs
+									each i in [1,2,3]
+										li: a(href=""): img(src="images/product/t-"+i+".jpg", alt="")
 							.product__content
 								h1.product__title Старинная монета “1 червонец 1701 года”
 								ul.product__properties
@@ -31,9 +36,23 @@ block content
 									li
 										span Правительство:
 										| Петр 1
+								.product__price
+									.product__price-text Цена:
+									.product__price-values
+										span.product__price-value
+											| от 
+											strong 1 000 000 
+											| грн
+										span.product__price-value
+											| от 
+											strong 2 000 000 
+											| грн
 								.product__action
 									a(href="").btn-primary Оценить мою монету
-
+							.product__desc
+								h3 История монеты
+								p Первый червонец из золота 969 пробы был выпущен Петром Первым в качестве денежной единицы. Червонцы выпускались небольшими партиями , и в основном шли за расплату с иностранными купцами. Червонцы чеканились и до царя Петра Первого , но они в основном имели функцию награды за какие то достижения на ниве Государственной службы.
+								p Существуют сведения , что червонцы Петра Первого совпадали по качеству , форме и весу с иностранными дукатами.
 				aside.sidebar.col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.is--no-padding
 					-var title = 'Монеты';
 					-var texts = ['Золотые монеты','Серебрянные  монеты','Медные монеты','Юбилейные монеты','Другие монеты'];

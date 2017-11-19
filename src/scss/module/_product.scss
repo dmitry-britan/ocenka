@@ -1,4 +1,6 @@
-.product{}
+.product{
+	@include clearfix();
+}
 .product__title{
 	margin: 0 0 20px;
 	font-size: 20px;
@@ -6,14 +8,102 @@
 	line-height: 24px;
 	color: #000000;
 }
-.product__photos{}
-.product__photo{}
-.product__thumbs{}
-.product__content{}
-.product__desc{}
-.product__price{}
+.product__photos{
+	float: left;
+	width: percentage(292/698.5);
+	@include clearfix();
+}
+.product__photo{
+	display: block;
+	width: 100%;
+	min-height: 292px;
+	margin-bottom: 24px;
+	border-radius: 5px;
+	border: 1px solid #e1e1e1;
+	background-color: #ffffff;
+	line-height: 290px;
+	text-align: center;
+
+	img{
+		max-width: 100%;
+		max-height: 100%;
+		vertical-align: middle;
+	}
+}
+.product__thumbs{
+	@include clearfix();
+	margin: 0; padding: 0;
+	list-style: none;
+
+	li{
+		float: left;
+		margin-bottom: 9px;
+
+		&:not(:last-child){
+			margin-right: 9px;
+		}
+		a{
+			display: block;
+			width: 56px;
+			height: 56px;
+			border-radius: 5px;
+			border: 1px solid #e1e1e1;
+			background-color: #ffffff;
+			line-height: 54px;
+			text-align: center;
+			transition: all 300ms linear;
+			&:hover{
+				border: 1px solid $color__secondary;
+			}
+		}
+		img{
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+}
+.product__content{
+	float: right;
+	width: percentage(378.5/698.5);
+}
+.product__desc{
+	padding-top: 50px;
+	clear: both;
+}
+.product__price{
+	@include clearfix();
+	padding: 10px 0;
+	margin-bottom: 30px;
+	border-top: 1px solid rgba(#000, .2);
+	border-bottom: 1px solid rgba(#000, .2);
+}
+.product__price-text{
+	float: left;
+	width: 160px;
+	font-size: 46px;
+	font-weight: 100;
+	line-height: 40px;
+	color: $color__secondary;
+}
+.product__price-values{
+	margin-left: 160px;
+}
+.product__price-value{
+	display: block;
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 21px;
+	color: $color__secondary;
+
+	strong{
+		font-size: 18px;
+		font-weight: 900;
+	}
+}
 .product__properties{
-	margin: 0;
+	margin: 0 0 15px;
 	padding: 0;
 	list-style: none;
 	font-size: 12px;
