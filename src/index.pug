@@ -38,7 +38,8 @@ block content
         | Ваш антиквариат
       .row
         .col.col--8-of-12.col--s-12-of-12.col--m-12-of-12.col--l-8-of-12.is--text-right
-          img(src="images/video.png", alt="", style="max-width: 100%;")
+          .js-video
+            iframe(src="https://www.youtube.com/embed/gFY6Ch6Ajb0" frameborder="0" allowfullscreen)
         .col.col--4-of-12.col--s-12-of-12.col--m-12-of-12.col--l-4-of-12
           .block
             .block__subheader.is--big.is--underline Вы еще не рашили где оценить свой антикваиат?
@@ -73,3 +74,8 @@ block content
   include pug/section/last-antiques.pug
 
 block body-end
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js')
+  script.
+    $(document).ready(function(){
+      $(".js-video").fitVids();
+    });
