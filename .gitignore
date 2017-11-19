@@ -4,3 +4,4 @@ node_modules/
 zip/
 aero-debug.log
 aero-deploy.tar.gz
+.vscode/
