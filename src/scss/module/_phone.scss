@@ -1,6 +1,10 @@
 .phone {
 	max-width: 350px;
 	line-height: 24px;
+	text-align: left;
+	@include media('<1040px'){
+		max-width: 300px;
+	}
 }
 .phone a{
 	display: inline-block;
@@ -18,4 +22,8 @@
 	text-transform: uppercase;
 	line-height: 24px;
 	color: #6a6a6a;
+
+	@include media('<1040px'){
+		font-size: 16px;
+	}
 }

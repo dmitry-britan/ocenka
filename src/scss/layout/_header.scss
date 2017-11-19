@@ -58,12 +58,15 @@
 		width: percentage(547/1860);
 	}
 	@include media('<1565px'){
-		width: percentage(500/1860);
-		padding-right: percentage(40/1860);
+		width: percentage(360/1860);
+		padding-right: percentage(20/1860);
 	}
-	@include media('<1380px'){
-		width: percentage(400/1860);
-		padding-right: percentage(40/1860);
+	@include media('<1350px'){
+		width: percentage(460/1860);
+	}
+	@include media('<1200px'){
+		width: percentage(300/1860);
+		padding-right: percentage(20/1860);
 	}
 	@include media('<992px'){
 		width: 240px;
@@ -84,7 +87,7 @@
 	width: 218px;
 	padding-right: 7px;
 	margin-top: -6px;
-	@include media('<1250px'){
+	@include media('<1350px'){
 		display: none!important;
 	}
 }
@@ -98,7 +101,7 @@
 }
 .header__menu{
 	margin-top: 3px;
-	@include media('<1380px'){
+	@include media('<1565px'){
 		float: right;
 		padding-right: percentage(40/1860);
 	}
