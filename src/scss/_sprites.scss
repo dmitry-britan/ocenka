@@ -59,6 +59,26 @@ $sprites: (
 			total_height: 186,
 		),
 	),
+	"close": (
+		normal: (
+			x: 117,
+			y: 45,
+			width: 19,
+			height: 19,
+			image: "sprites.png",
+			total_width: 176,
+			total_height: 93,
+		),
+		retina: (
+			x: 234,
+			y: 90,
+			width: 38,
+			height: 38,
+			image: "sprites@2x.png",
+			total_width: 352,
+			total_height: 186,
+		),
+	),
 	"mail": (
 		normal: (
 			x: 50,
