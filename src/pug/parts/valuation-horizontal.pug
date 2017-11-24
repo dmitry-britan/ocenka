@@ -13,7 +13,7 @@ div(class="valuation "+className)
 					.valuation__upload
 						label(for='file-'+i).valuation__upload-img
 							img(src="images/upload.png", alt="", data-upload="file-"+i)
-						input(id="file-"+i).valuation__upload-file(type='file', name='file-'+i)
+						input(id="file-"+i, type='file', name='file-'+i).valuation__upload-file
 						label(for='file-'+i).valuation__upload-label 
 							| фото 
 							=(index+1)
@@ -28,4 +28,4 @@ div(class="valuation "+className)
 					input(type="email", name="", placeholder="Email").is--center
 				.valuation__step-text После отправки заявки наоценку течении дня с вами свяжеться наш эксперт
 				.valuation__action
-					a(href="").btn-primary Получить цену
+					button(type="submit").btn.btn-primary Получить цену
