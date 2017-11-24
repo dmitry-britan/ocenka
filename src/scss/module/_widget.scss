@@ -42,36 +42,3 @@
 		padding: 0;
 	}
 }
-.widget__list{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.widget__list-item{
-	position: relative;
-	padding: 7px 0 6px 43px;
-	opacity: 0.8;
-	&.is--active{
-		background: linear-gradient(to right, rgba(234,234,234,1) 55%,rgba(234,234,234,0.51) 65%,rgba(0,0,0,0) 100%);
-
-		a{
-			color: #ff4b55;
-		}
-	}
-	i{
-		position: absolute;
-		left: 13px; top: 13px;
-	}
-}
-.widget__list-link{
-	display: block;
-	font-size: 12px;
-	font-weight: 300;
-	line-height: 21px;
-	color: $color__secondary;
-	text-decoration: none;
-	transition: all 300ms linear;
-	&:hover{
-		color: #ff4b55;
-	}
-}

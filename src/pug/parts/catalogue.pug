@@ -1,0 +1,42 @@
+-var title = (title) ? title : 'Оценка антиквариата';
+-var bgClass = (bgClass) ? bgClass : '';
+.widget
+	.widget__header
+		span.widget__title= title
+	div(class="widget__content "+bgClass)
+		nav.catalogue.js-catalogue
+			// level 1
+			ul.catalogue__list.is--level-1
+				-var texts = (texts)?texts:['Монеты','Часы','Ордена и медали','Банкноты','Столовое серебро','Иконы','Книги','Изделия из янтаря','Коралловые бусы'];
+				each text, i in texts
+					-if ( i === 1) {
+						li(class="catalogue__item")
+							span.catalogue__arrow.js-catalogue-list-toggle
+								i.icon-arrow-down
+							a(href="catalog.html").catalogue__link
+								= text
+							// level 2
+							ul.catalogue__list.is--level-2
+								li.catalogue__item
+									span.catalogue__arrow.js-catalogue-list-toggle
+										i.icon-arrow-down
+									a(href="catalog.html").catalogue__link
+										| Монеты Царской России
+									// level 3
+									ul.catalogue__list.is--level-3
+										-var links = ['Монеты Петра 1','Монеты Екатерины 1','Монеты Петра 2','Монеты Анны Иоановны','Монеты Петра 3','Монеты Екатерины 2','Монеты Павла 1','Монеты Николая 1','Монеты Алексантра 2'];
+										each link, i in links
+											-var isCurrent = (i === 0)?' is--current':'';
+											li(class="catalogue__item"+isCurrent)
+												a(href="catalog.html").catalogue__link= link
+
+								li.catalogue__item
+									a(href="catalog.html").catalogue__link Монеты СССР
+								li.catalogue__item
+									a(href="catalog.html").catalogue__link Монеты мира
+								li.catalogue__item
+									a(href="catalog.html").catalogue__link Монеты Украины
+					-} else {
+						li.catalogue__item
+							a(href="catalog.html").catalogue__link= text
+					-}

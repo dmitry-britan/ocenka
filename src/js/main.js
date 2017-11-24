@@ -167,6 +167,15 @@ if ($('.js-slider-antiques').length) {
 }
 
 //
+// Каталог - навигация
+// =================================================================
+$('.js-catalogue').on('click', '.js-catalogue-list-toggle', (event) => {
+	let arrow = event.currentTarget;
+
+	$(arrow).parent().toggleClass('is--opened');
+});
+
+//
 // Обработка элемента формы input[type=file]
 // =================================================================
 function showUploadThumb(input) {
