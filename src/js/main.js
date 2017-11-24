@@ -204,3 +204,84 @@ $('input[type=file]').on('change', (event) => {
 
 	showUploadThumb(event.currentTarget);
 });
+
+//
+// Валидация формы отзывов
+// =================================================================
+$('.js--feedback-form').validate({
+	rules: {
+		name: {
+			required: true,
+		},
+		subject: {
+			required: true,
+		},
+		comment: {
+			required: true,
+		},
+	},
+	messages: {
+		subject: {
+			required: 'Введите название предмета',
+		},
+		name: {
+			required: 'Введите Ваше имя',
+		},
+		comment: {
+			required: 'Введите Ваш отзыв',
+		},
+	},
+	focusCleanup: true,
+	focusInvalid: false,
+});
+
+//
+// Валидация формы "Задать вопрос"
+// =================================================================
+$('.js--ask-form').validate({
+	rules: {
+		phone: {
+			required: true,
+		},
+		comment: {
+			required: true,
+		},
+	},
+	messages: {
+		phone: {
+			required: 'Введите номер телефона',
+		},
+		comment: {
+			required: 'Введите Ваш отзыв',
+		},
+	},
+	focusCleanup: true,
+	focusInvalid: false,
+});
+
+//
+// Валидация формы "Оценка антиквариата"
+// =================================================================
+let valuationValidateSettings = {
+	rules: {
+		phone: {
+			required: true,
+		},
+	},
+	messages: {
+		phone: {
+			required: 'Введите номер телефона',
+		},
+	},
+	focusCleanup: true,
+	focusInvalid: false,
+};
+
+// SIDEBAR FORM
+$('.js-valuation-form').validate(valuationValidateSettings);
+
+// FOOTER FORM
+$('.js-valuation-form--footer').validate(valuationValidateSettings);
+
+// HORIZONTAL FORM
+$('.js-valuation-form--horizontal').validate(valuationValidateSettings);
