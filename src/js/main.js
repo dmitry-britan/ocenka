@@ -294,3 +294,20 @@ $('.js-valuation-form--footer').validate(valuationValidateSettings);
 
 // HORIZONTAL FORM
 $('.js-valuation-form--horizontal').validate(valuationValidateSettings);
+
+//
+// Подключаем fancybox для фото товара
+//---------------------------------------------------------------------------------------
+let $gallery = $('[rel="gallery"]');
+
+if ($gallery.length) {
+	$gallery.fancybox({
+		openEffect: 'elastic',
+		closeEffect: 'elastic',
+		helpers: {
+			title: {
+				type: 'inside',
+			},
+		},
+	});
+}

@@ -10,11 +10,11 @@ block content
 					.content
 						.product
 							.product__photos
-								a(href="").product__photo
+								a(href="images/product/p-1.jpg", rel="gallery").product__photo
 									img(src="images/product/p-1.jpg", alt="")
 								ul.product__thumbs
 									each i in [1,2,3]
-										li: a(href=""): img(src="images/product/t-"+i+".jpg", alt="")
+										li: a(href="images/product/p-1.jpg", rel="gallery"): img(src="images/product/t-"+i+".jpg", alt="")
 							.product__content
 								h1.product__title Старинная монета “1 червонец 1701 года”
 								ul.product__properties
