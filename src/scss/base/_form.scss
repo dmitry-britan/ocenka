@@ -132,7 +132,8 @@ textarea{
 .form__field{
   position: relative;
   width: 100%;
-  margin-bottom: 30px;
+	margin-bottom: 12px;
+  @include clearfix();
   
   &.is--required{
     &:after{
@@ -219,7 +220,7 @@ textarea{
 .select:hover, 
 .textarea:focus, 
 .textarea:hover {
-	border-color: darken($color__primary,10%);
+	border-color: darken(#b7b7b7,3%);
 	outline: 0;
 }
 .radio {
@@ -310,10 +311,10 @@ textarea{
 }
 .form__text{
   margin: 0 0 10px;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 30px;
-  color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: rgba(#000, .6);
   &.is--center{
     text-align: center;
   }
