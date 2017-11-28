@@ -7,6 +7,10 @@
 .review__photo{
 	width: 123px;
 	float: left;
+	@include media('<480px'){
+		float: none;
+		margin: 0 auto 20px;
+	}
 	img{
 		display: block;
 		max-width: 100%;
@@ -14,6 +18,9 @@
 }
 .review__content{
 	margin-left: 150px;
+	@include media('<480px'){
+		margin-left: 0;
+	}
 }
 .review__title{
 	margin: 0 0 15px;

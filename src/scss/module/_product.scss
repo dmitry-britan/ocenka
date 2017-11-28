@@ -12,6 +12,11 @@
 	float: left;
 	width: percentage(292/698.5);
 	@include clearfix();
+	
+	@include media('<768px'){
+		float: none;
+		width: 100%;
+	}
 }
 .product__photo{
 	display: block;
@@ -67,6 +72,11 @@
 .product__content{
 	float: right;
 	width: percentage(378.5/698.5);
+	
+	@include media('<768px'){
+		float: none;
+		width: 100%;
+	}
 }
 .product__desc{
 	padding-top: 50px;
@@ -86,9 +96,19 @@
 	font-weight: 100;
 	line-height: 40px;
 	color: $color__secondary;
+	
+	@include media('<480px'){
+		float: none;
+		width: 100%;
+		margin-bottom: 10px;
+	}
 }
 .product__price-values{
 	margin-left: 160px;
+	
+	@include media('<480px'){
+		margin-left: 0;
+	}
 }
 .product__price-value{
 	display: block;

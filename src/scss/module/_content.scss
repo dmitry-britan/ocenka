@@ -2,6 +2,9 @@
 	padding: 44px 67px;
 	box-shadow: 0 11px 13px rgba(0, 0, 0, 0.3);
 	background-color: #ffffff;
+	@include media('<768px'){
+		padding: 20px 30px;
+	}
 	&.is--gray{
 		background-color: #fafafa;
 	}
@@ -10,6 +13,7 @@
 		border-top-right-radius: 5px;
 	}
 	&:last-child{
+		margin-bottom: 30px;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
 	}
@@ -20,6 +24,12 @@
 	font-weight: 900;
 	line-height: 45px;
 	color: $color__secondary;
+	@include media('<768px'){
+		margin: 0 0 25px;
+		font-size: 32px;
+		font-weight: 900;
+		line-height: 36px;
+	}
 	&.is--center{
 		text-align: center;
 	}

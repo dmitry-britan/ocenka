@@ -1,3 +1,6 @@
 .main{
 	padding-right: 30px;
+	@include media('<992px'){
+		padding-right: 0;
+	}
 }

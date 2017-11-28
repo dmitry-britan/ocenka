@@ -1,5 +1,9 @@
-.feedback{}
-.feedback__inner{}
+.feedback{
+	@include clearfix();
+}
+.feedback__inner{
+	overflow: hidden;
+}
 .feedback__header{
 	margin: 0 0 30px;
 	font-size: 32px;
