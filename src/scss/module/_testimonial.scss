@@ -17,9 +17,20 @@
 		display: block;
 		max-width: 100%;
 	}
+	@include media('<480px'){
+		width: 100%;
+		float: none;
+
+		img{
+			margin: 0 auto 20px;
+		}
+	}
 }
 .testimonial__content{
 	margin-left: percentage(211/460);
+	@include media('<480px'){
+		margin-left: 0;
+	}
 }
 .testimonial__title{
 	margin: 0 0 5px;
