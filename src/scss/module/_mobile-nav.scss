@@ -105,7 +105,7 @@ body:after{
   transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 body.is--mobile-active{
-  overflow: hidden;
+  overflow: hidden!important;
 
   &:after{
     width: 100%;
