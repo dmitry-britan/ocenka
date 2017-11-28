@@ -311,3 +311,10 @@ if ($gallery.length) {
 		},
 	});
 }
+
+//
+// Раскрытие/скрытие элементов
+// =================================================================
+$('.js-more-testimonials').on('click', () => {
+	$('.js-testimonials-wrapper').toggleClass('is--opened');
+});
