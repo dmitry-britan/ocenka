@@ -39,13 +39,14 @@ block content
       .row
         .col.col--8-of-12.col--s-12-of-12.col--m-12-of-12.col--l-8-of-12.is--text-right
           .js-video
-            iframe(src="https://www.youtube.com/embed/gFY6Ch6Ajb0" frameborder="0" allowfullscreen)
+            //- iframe(src="https://www.youtube.com/embed/gFY6Ch6Ajb0" frameborder="0" allowfullscreen)
+            img(src="images/video.jpg", alt="")
         .col.col--4-of-12.col--s-12-of-12.col--m-12-of-12.col--l-4-of-12
           .block
             .block__subheader.is--big.is--underline Вы еще не рашили где оценить свой антиквариат?
             .block__text.is--margin Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании
             .block__action
-              a(href="").btn-primary.is--md Задать вопрос
+              a(href="", data-modal="ask").btn-primary.is--md Задать вопрос
   section.section.section--why
     .container
       .row
