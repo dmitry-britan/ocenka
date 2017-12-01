@@ -237,6 +237,10 @@
 	height: 45px;
 	margin: 0;
 	cursor: pointer;
+	transition: all 300ms linear;
+	&:hover{
+		opacity: 0.7;
+	}
 	img{
 		display: block;
 		max-width: 100%;
@@ -260,6 +264,7 @@
 	font-family: $font-family-secondary;
 	font-size: 9px;
 	font-weight: 400;
+	font-style: normal;
 	line-height: 18px;
 	color: #a0a7b1;
 	cursor: pointer;
