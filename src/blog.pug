@@ -6,7 +6,7 @@ block content
 	section.section.section--bg-1
 		.container
 			.row
-				main.main.col.col--9-of-12.col--s-12-of-12.col--m-12-of-12.col--l-8-of-12
+				main.main.col.col--9-of-12.col--s-12-of-12.col--m-12-of-12.col--l-9-of-12
 					.content
 						h2.content__header.is--center Блог
 						each i in [1,2,3,4]
@@ -16,12 +16,27 @@ block content
 								h3.post__title: a(href="post.html") Монеты в Киеве
 								p.post__text Всем известна ситуация, когда находишь старые монеты и не знаешь, что с ними делать. С одной стороны, они не нужны, а с другой — вдруг представляют ценность? Вы всегда можете продать монеты в Киеве нашей фирме. Мы осуществляем бесплатную оценку нумизматического материала и даем за него хорошую цену.
 						include pug/parts/pagination.pug
-				aside.sidebar.col.col--3-of-12.col--s-12-of-12.col--m-12-of-12.col--l-4-of-12.is--no-padding
+				aside.sidebar.col.col--3-of-12.col--s-12-of-12.col--m-12-of-12.col--l-3-of-12.is--no-padding
 					-var bgClass = 'is--text-bg';
 					include pug/parts/catalogue.pug
-										
+					
+					-var className = ' js-sticky';
 					include pug/parts/valuation-2.pug
 
-
+					-var noValuation = true;
 
 block body-end
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js')
+	script.
+		$(window).on('resize load', function(){
+			if ( $(window).width() >= 992 ) {
+				isSticky = true;
+				$('.js-sticky').stick_in_parent({
+					parent: '.section--bg-1',
+					offset_top: 100,
+					bottoming: false,
+				});
+			} else {
+				$('.js-sticky').trigger('sticky_kit:detach');
+			}
+		});

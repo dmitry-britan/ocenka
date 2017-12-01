@@ -163,6 +163,18 @@
 	position: relative;
 	padding: 28px 31px 20px 26px;
 
+	@include media('<1200px'){
+		padding: 28px 21px 20px 21px;
+	}
+	@include media('<1100px'){
+		padding: 28px 10px 20px 10px;
+	}
+	@include media('<1020px'){
+		padding: 28px 4px 20px 4px;
+	}
+	@include media('<992px'){
+		padding: 28px 28px 20px 28px;
+	}
 	@include media('<480px'){
 		padding: 20px 18px;
 	}
@@ -221,6 +233,9 @@
 	float: left;
 	margin-right: 9px;
 	width: 74px;
+	@include media('<1200px'){
+		margin-right: 5px;
+	}
 	&:last-child{
 		margin-right: 0;
 	}

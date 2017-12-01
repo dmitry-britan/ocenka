@@ -6,7 +6,7 @@ block content
 	section.section.section--bg-1
 		.container
 			.row
-				main.main.col.col--9-of-12.col--s-12-of-12.col--m-12-of-12.col--l-8-of-12
+				main.main.col.col--9-of-12.col--s-12-of-12.col--m-12-of-12.col--l-9-of-12
 					.content.is--have-next
 						h2.content__header.is--center Отзывы
 						include pug/parts/review.pug
@@ -14,11 +14,9 @@ block content
 					.content.is--gray.is--have-prev
 						include pug/parts/feedback.pug
 
-				aside.sidebar.col.col--3-of-12.col--s-12-of-12.col--m-12-of-12.col--l-4-of-12.is--no-padding
+				aside.sidebar.col.col--3-of-12.col--s-12-of-12.col--m-12-of-12.col--l-3-of-12.is--no-padding
 					-var bgClass = 'is--text-bg';
 					include pug/parts/catalogue.pug
-										
-					include pug/parts/valuation-2.pug
 
 					.widget
 						h3.title.is--text-center 
@@ -28,7 +26,28 @@ block content
 						.widget__content.is--long-shadow.is--no-padding
 							.js-video
 								iframe(src="https://www.youtube.com/embed/gFY6Ch6Ajb0" frameborder="0" allowfullscreen)
+										
+					-var className = ' js-sticky';
+					include pug/parts/valuation-2.pug
+
+					-var noValuation = true;
+
 block body-end
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js')
+	script.
+		$(window).on('resize load', function(){
+			if ( $(window).width() >= 992 ) {
+				isSticky = true;
+				$('.js-sticky').stick_in_parent({
+					parent: '.section--bg-1',
+					offset_top: 100,
+					bottoming: false,
+				});
+			} else {
+				$('.js-sticky').trigger('sticky_kit:detach');
+			}
+		});
+
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js')
 	script.
 		$(document).ready(function(){

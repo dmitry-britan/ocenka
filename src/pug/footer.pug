@@ -35,7 +35,9 @@ section.section.section--feedback
                   i.icon-whatsup
                 p.social__text нажмите на иконку для ого, чтобы оцеить антиквариат через месенджер
       .col.col--4-of-12.col--s-12-of-12.col--m-12-of-12.col--l-4-of-12
-        include parts/valuation.pug
+        -if ( !noValuation ){
+          include parts/valuation.pug
+        -}
 
 // FOOTER
 footer.footer
