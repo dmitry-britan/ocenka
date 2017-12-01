@@ -3,6 +3,9 @@
 }
 .icon-mail{
 	@include sprite('mail');
+	&:hover{
+		@include sprite('mail-hover');
+	}
 }
 .icon-viber{
 	@include sprite('viber');

@@ -23,7 +23,8 @@
 	cursor: pointer;
 	transition: all 250ms linear;
 	&:hover{
-		color: darken($color__primary, 5%);
+		background: $color__primary;
+		color: $color__third;
 	}
 }
 .btn-bordered--alt{
