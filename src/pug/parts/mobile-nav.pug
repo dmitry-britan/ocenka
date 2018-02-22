@@ -6,116 +6,196 @@ nav.mobile-nav
     span
   .mobile-nav__inner
     .mobile-nav__block
-      a(href="").mobile-nav__block-icon
-        img(src="images/menu/m-1.png", alt="")
-      ul.mobile-nav__list
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Монеты
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Монеты Царской России
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Монеты СССР
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Монеты мира
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Монеты Украины
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-1.png", alt="")
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Монеты
+          //- для текущей категории к тегу li добавить кдасс .is--current
+          //- должно быть что-то в роде <li class="mobile-nav__item is--current">
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Золотые монеты
+            ul.mobile-nav__sublist
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Монеты Петра 1
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Монеты Екатерины 1
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Монеты Петра 2
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Монеты Анны Иоановны
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Монеты Петра 3
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Монеты Екатерины 2
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Монеты Павла 1
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Монеты Николая 1
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Монеты Алексантра 2
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Серебряные монеты
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Медные монеты
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Юбилейные монеты
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Другие монеты
 
     .mobile-nav__block
-      a(href="").mobile-nav__block-icon
-        img(src="images/menu/m-2.png", alt="")
-      ul.mobile-nav__list
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Часы
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Наручные часы
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Корманные часы
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-2.png", alt="")
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Фарфор
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Фарфоровая посуда
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Фарфоровые статуэтки
+            ul.mobile-nav__sublist
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Тест 1
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Тест 2
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Тест 3
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Фарфоровые вазы
+            ul.mobile-nav__sublist
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Тест 1
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Тест 2
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Тест 3
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Тест 4
+              li.mobile-nav__sublist-item
+                a.mobile-nav__sublist-link(href='catalog.html') Тест 5
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Изделия по периоду
+    .mobile-nav__block
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-3.png", alt="")
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Награды
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Награды по виду
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Награды по типу
 
     .mobile-nav__block
-      a(href="").mobile-nav__block-icon
-        img(src="images/menu/m-3.png", alt="")
-      ul.mobile-nav__list
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Ордена
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Ордена 2й мировой войны
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Ордена СССР
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-4.png", alt="")
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Банкноты
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Банкноты царской России 1769-1917 годов
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Денежные знаки временного правительства
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Боны периода гражданской войны
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Боны РСФСР 1918-124 годов
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Денежные знаки СССР 1923-1992 годов
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Банкноты Украины 1917-1992 годов
 
     .mobile-nav__block
-      a(href="").mobile-nav__block-icon
-        img(src="images/menu/m-4.png", alt="")
-      ul.mobile-nav__list
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Банкноты
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Банкноты царской России
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Банкноты других стран
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-5.png", alt="")
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Столовое серебро
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Серебряная посуда
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Серебряные приборы
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Детская серебряная посуда
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Серебряные подсвечники
 
     .mobile-nav__block
-      a(href="").mobile-nav__block-icon
-        img(src="images/menu/m-5.png", alt="")
-      ul.mobile-nav__list
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Столовое серебро
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Серебренные сервизы
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Серебренные ложки
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Серебренные вилки
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Позолоченное серебро
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-6.png", alt="")
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Иконы
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Иконы до XVI века
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Иконы XVI века
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Иконы XVII века
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Иконы XVIII века
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Иконы XIX века
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Иконы XX века
+    .mobile-nav__block
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-7.png", alt="")
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Книги
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Книги по истории
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Книги по искусству
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Книги по литературе
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Книги по науке
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Церковные книги
+    .mobile-nav__block
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-8.png", alt="")
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Изделия из Янтаря
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Янтарные бусы
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Браслеты
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Броши
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Четки
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Ювелирные изделия для детей
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Кольца из янтаря
 
     .mobile-nav__block
-      a(href="").mobile-nav__block-icon
-        img(src="images/menu/m-6.png", alt="")
-      ul.mobile-nav__list
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Иконы
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Иконы богоматери
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Иконы Иисуса
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Иконы Михаила чудотворца
-
-    .mobile-nav__block
-      a(href="").mobile-nav__block-icon
-        img(src="images/menu/m-7.png", alt="")
-      ul.mobile-nav__list
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Книги
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Библии
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Другие книги
-
-    .mobile-nav__block
-      a(href="").mobile-nav__block-icon
-        img(src="images/menu/m-8.png", alt="")
-      ul.mobile-nav__list
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Изделия из Янтаря
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Бусы из янтаря
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Шкатулки из янтаря
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Броши из янтаря
-
-    .mobile-nav__block
-      a(href="").mobile-nav__block-icon
-        img(src="images/menu/m-9.png", alt="")
-      ul.mobile-nav__list
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Коралловые бусы
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Бусы из красного коралла
-        li.mobile-nav__item
-          a.mobile-nav__link(href='catalog.html') Бусы из белого коралла
-
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-9.png", alt="")
+        ul.mobile-nav__list
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Другой антиквариат
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Антикварное творчество
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Антикварные изделия из разных материалов
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Антикварные украшения
+          li.mobile-nav__item
+            a.mobile-nav__link(href='catalog.html') Антикварная посуда
 
   .mobile-nav__footer
     .row

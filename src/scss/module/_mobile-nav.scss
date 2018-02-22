@@ -169,6 +169,7 @@ body.is--mobile-active{
   background: url('../images/stripes.png') 0 0 repeat;
 }
 .mobile-nav__block{
+  position: relative;
   @include col();
   width: percentage(1/3);
   @include media('<1200px'){
@@ -176,6 +177,17 @@ body.is--mobile-active{
   }
   @include media('<640px'){
     width: percentage(1/1);
+  }
+}
+.mobile-nav__block-inner{
+  &:hover{
+    position: absolute;
+    left: 0; right: 0;
+    width: 100%;
+    padding-left: 30px;
+    box-shadow: 0 35px 27px rgba(0, 0, 0, 0.11);
+    background-color: #ffffff;
+    z-index: 300;
   }
 }
 .mobile-nav__block-icon{
@@ -201,7 +213,6 @@ body.is--mobile-active{
 }
 .mobile-nav__item{
   display: block;
-  // margin-bottom: 12px;
   
   &:first-child a{
     margin: 0 0 20px;
@@ -221,7 +232,37 @@ body.is--mobile-active{
   letter-spacing: 0.11px;
   text-decoration: none;
   &:hover,
-  &.is--current{
-    text-decoration: underline;
+  .mobile-nav__item.is--current &{
+    color: #ff4b55;
+  }
+}
+
+.mobile-nav__item.is--current,
+.mobile-nav__item:hover{
+  & > .mobile-nav__link + .mobile-nav__sublist{
+    display: block;
+  }
+}
+
+// sublist
+.mobile-nav__sublist{
+  display: none;
+  margin: 0;
+  padding: 0 0 0 16px;
+}
+.mobile-nav__sublist-item{
+  display: block;
+}
+.mobile-nav__sublist-link{
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  color: rgba(#6f6e72, .6);
+  letter-spacing: 0.11px;
+  text-decoration: none;
+  &:hover,
+  .mobile-nav__sublist-item.is--current &{
+    color: #ff4b55;
   }
 }

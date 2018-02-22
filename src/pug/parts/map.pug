@@ -2,10 +2,10 @@
 
 script.
 	function initMap() {
-		var ocenka = {lat: 50.446847, lng: 30.511860};
+		var topperz = {lat: 50.446847, lng: 30.511860};
 		var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 16,
-		center: ocenka,
+		center: topperz,
 		styles: [{
 			"stylers": [
 					{
@@ -121,7 +121,7 @@ script.
 			}],
 		});
 		var marker = new google.maps.Marker({
-		position: ocenka,
+		position: topperz,
 		map: map,
 		icon: 'images/pointer.png'
 	});
