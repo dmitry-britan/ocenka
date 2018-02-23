@@ -136,6 +136,9 @@ body.is--mobile-active{
 }
 .mobile-nav__inner{
   padding: 120px 80px 0;
+  @include media('<640px'){
+    padding: 60px 40px 0 30px;
+  }
 }
 
 .mobile-nav__toggle{
@@ -151,6 +154,9 @@ body.is--mobile-active{
   right: 45px;
   cursor: pointer;
   z-index: 10000;
+  @include media('<640px'){
+    top: 15px; right: 15px;
+  }
 }
 .mobile-nav__toggle{
 	position: relative;
@@ -177,6 +183,7 @@ body.is--mobile-active{
   }
   @include media('<640px'){
     width: percentage(1/1);
+    height: auto!important;
   }
 }
 .mobile-nav__block-inner{
@@ -188,6 +195,18 @@ body.is--mobile-active{
     box-shadow: 0 35px 27px rgba(0, 0, 0, 0.11);
     background-color: #ffffff;
     z-index: 300;
+    
+    @include media('<640px'){
+      position: relative;
+      padding: 0;
+      box-shadow: none;
+    }
+    
+    .mobile-nav__item.is--current{
+      & > .mobile-nav__sublist{
+        display: block;
+      }
+    }
   }
 }
 .mobile-nav__block-icon{
@@ -212,8 +231,17 @@ body.is--mobile-active{
   }
 }
 .mobile-nav__item{
+  position: relative;
   display: block;
-  
+  padding-right: 20px;
+  i{
+    position: absolute;
+    right: 0; top: 0;
+    width: 21px;
+    line-height: 21px;
+    text-align: center;
+    cursor: pointer;
+  }
   &:first-child a{
     margin: 0 0 20px;
     font-size: 24px;
@@ -234,13 +262,6 @@ body.is--mobile-active{
   &:hover,
   .mobile-nav__item.is--current &{
     color: #ff4b55;
-  }
-}
-
-.mobile-nav__item.is--current,
-.mobile-nav__item:hover{
-  & > .mobile-nav__link + .mobile-nav__sublist{
-    display: block;
   }
 }
 

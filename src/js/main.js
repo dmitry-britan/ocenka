@@ -63,6 +63,7 @@ class Menu {
 		this.closeMobileMenuOnOutOfClick();
 		$('.js-nav-toggle').on('click', () => {
 			this.setMenuBlockHeight();
+			this.toggleSubMenu();
 			this.toggleMenuVisibility();
 			this.toggleMenuTriggerClass();
 			this.toggleBodyBackground();
@@ -75,8 +76,14 @@ class Menu {
 			"toggleMenuTriggerClass",
 			"closeMobileMenuOnOutOfClick",
 			"setMenuBlockHeight",
+			"toggleSubMenu",
 		] }] 
 	*/
+	toggleSubMenu() {
+		$('.mobile-nav__item').on('click', 'i', (event) => {
+			$(event.currentTarget).parent().toggleClass('is--current');
+		});
+	}
 	setMenuBlockHeight() {
 		$('.mobile-nav__block').each((index, element) => {
 			let height = $(element).height();
