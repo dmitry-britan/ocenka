@@ -1,35 +1,3 @@
-//
-// CLASS - Slider
-// =================================================================
-class Slider {
-	constructor(selector, options) {
-		this.options = options;
-		this.slider = selector.bxSlider(this.options());
-
-		this.watch();
-	}
-
-	getSettings() {
-		return this.options();
-	}
-
-	reloadSettings() {
-		this.slider.reloadSlider($.extend(this.getSettings(), {startSlide: this.slider.getCurrentSlide()}));
-	}
-
-	watch() {
-		let slider = this;
-
-		$(window).on('resize load', () => {
-			setTimeout(slider.reloadSettings(), 500);
-		});
-	}
-}
-
-function createSlider(selector, options) {
-	return new Slider(selector, options);
-}
-
 /* Get Device Width */
 function getWidth() {
 	if (self.innerWidth) {
@@ -43,16 +11,6 @@ function getWidth() {
 	if (document.body) {
 		return document.body.clientWidth;
 	}
-}
-function dropdown(triger, menu) {
-	$(triger).hover(
-		(event) => {
-			$(event.currentTarget).find(menu).stop(true, true).fadeIn(300);
-		},
-		(event) => {
-			$(event.currentTarget).find(menu).stop(true, true).fadeOut(150);
-		}
-	);
 }
 
 //
@@ -143,43 +101,36 @@ $('[data-modal]').on('click', (e) => {
 });
 
 //
-// Slider - Accounts
+// Slider - antiques
 // =================================================================
 if ($('.js-slider-antiques').length) {
-	let sliderBlock = $('.js-slider-antiques');
-	let options = () =>	{
-		let setting = {};
-		let	setting1 = {
-			maxSlides: 2,
-		};
-		let setting2 = {
-			maxSlides: 4,
-		};
-		let common = {
-			auto: false,
-			pager: false,
-			slideWidth: 229,
-			slideMargin: 52,
-			minSlides: 1,
-			moveSlides: 1,
-			controls: true,
-			nextSelector: '.slider__next',
-			prevSelector: '.slider__prev',
-			nextText: '',
-			prevText: '',
-		};
-
-		if (window.innerWidth <= 1200) {
-			setting = $.extend(setting1, common);
-		}
-		if (window.innerWidth > 1200) {
-			setting = $.extend(setting2, common);
-		}
-
-		return setting;
-	};
-
-	createSlider(sliderBlock, options);
+	$('.js-slider-antiques').slick({
+		arrows: true,
+		nextArrow: '.slider__next',
+		prevArrow: '.slider__prev',
+		adaptiveHeight: true,
+		infinite: true,
+		speed: 400,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		// the magic
+		responsive: [{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 3,
+			},
+		}, {
+			breakpoint: 860,
+			settings: {
+				slidesToShow: 2,
+			},
+		}, {
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+			},
+		}],
+	});
 }
 
 //

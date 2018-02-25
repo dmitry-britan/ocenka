@@ -23,49 +23,6 @@ function _classCallCheck(instance, Constructor) {
 	}
 }
 
-//
-// CLASS - Slider
-// =================================================================
-var Slider = function() {
-	function Slider(selector, options) {
-		_classCallCheck(this, Slider);
-
-		this.options = options;
-		this.slider = selector.bxSlider(this.options());
-
-		this.watch();
-	}
-
-	_createClass(Slider, [{
-		key: 'getSettings',
-		value: function getSettings() {
-			return this.options();
-		}
-	}, {
-		key: 'reloadSettings',
-		value: function reloadSettings() {
-			this.slider.reloadSlider($.extend(this.getSettings(), {
-				startSlide: this.slider.getCurrentSlide()
-			}));
-		}
-	}, {
-		key: 'watch',
-		value: function watch() {
-			var slider = this;
-
-			$(window).on('resize load', function() {
-				setTimeout(slider.reloadSettings(), 500);
-			});
-		}
-	}]);
-
-	return Slider;
-}();
-
-function createSlider(selector, options) {
-	return new Slider(selector, options);
-}
-
 /* Get Device Width */
 function getWidth() {
 	if (self.innerWidth) {
@@ -79,14 +36,6 @@ function getWidth() {
 	if (document.body) {
 		return document.body.clientWidth;
 	}
-}
-
-function dropdown(triger, menu) {
-	$(triger).hover(function(event) {
-		$(event.currentTarget).find(menu).stop(true, true).fadeIn(300);
-	}, function(event) {
-		$(event.currentTarget).find(menu).stop(true, true).fadeOut(150);
-	});
 }
 
 //
@@ -197,43 +146,36 @@ $('[data-modal]').on('click', function(e) {
 });
 
 //
-// Slider - Accounts
+// Slider - antiques
 // =================================================================
 if ($('.js-slider-antiques').length) {
-	var sliderBlock = $('.js-slider-antiques');
-	var options = function options() {
-		var setting = {};
-		var setting1 = {
-			maxSlides: 2
-		};
-		var setting2 = {
-			maxSlides: 4
-		};
-		var common = {
-			auto: false,
-			pager: false,
-			slideWidth: 229,
-			slideMargin: 52,
-			minSlides: 1,
-			moveSlides: 1,
-			controls: true,
-			nextSelector: '.slider__next',
-			prevSelector: '.slider__prev',
-			nextText: '',
-			prevText: ''
-		};
-
-		if (window.innerWidth <= 1200) {
-			setting = $.extend(setting1, common);
-		}
-		if (window.innerWidth > 1200) {
-			setting = $.extend(setting2, common);
-		}
-
-		return setting;
-	};
-
-	createSlider(sliderBlock, options);
+	$('.js-slider-antiques').slick({
+		arrows: true,
+		nextArrow: '.slider__next',
+		prevArrow: '.slider__prev',
+		adaptiveHeight: true,
+		infinite: true,
+		speed: 400,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		// the magic
+		responsive: [{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 3
+			}
+		}, {
+			breakpoint: 860,
+			settings: {
+				slidesToShow: 2
+			}
+		}, {
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1
+			}
+		}]
+	});
 }
 
 //
