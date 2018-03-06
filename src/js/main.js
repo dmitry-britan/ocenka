@@ -253,6 +253,9 @@ let valuationValidateSettings = {
 	focusInvalid: false,
 };
 
+// CALLBACK FORM
+$('.js--callback-form').validate(valuationValidateSettings);
+
 // SIDEBAR FORM
 $('.js-valuation-form').validate(valuationValidateSettings);
 
