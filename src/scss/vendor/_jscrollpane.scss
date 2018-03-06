@@ -5,42 +5,37 @@
  * may not operate correctly without them.
  */
 
-.jspContainer
-{
+ .jspContainer {
 	overflow: hidden;
 	position: relative;
 }
 
-.jspPane
-{
+.jspPane {
 	position: absolute;
 }
 
-.jspVerticalBar
-{
+.jspVerticalBar {
 	position: absolute;
 	top: 0;
-	right: 3px;
-	width: 17px;
+	right: 0;
+	width: 6px;
 	height: 100%;
-	background: red;
+	background-color: transparent;
 }
 
-.jspHorizontalBar
-{
+.jspHorizontalBar {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 17px;
-	background: red;
+	background-color: transparent;
 }
 
 .jspScrollable {
-	
-	&:focus{
-		outline: none;
-		border: 0;
+	&:focus {
+			outline: none;
+			border: 0;
 	}
 }
 
@@ -48,35 +43,35 @@
 	display: none;
 }
 
-.jspHorizontalBar .jspCap
-{
+.jspHorizontalBar .jspCap {
 	float: left;
 }
 
-.jspTrack
-{
-	background-color: #f0f0f0;
+.jspTrack {
+	background-color: transparent;
 	position: relative;
+	width: 6px;
+	border-radius: 3px;
 }
 
-.jspDrag
-{
-	background-color: #d1d4d3;
+.jspDrag {
+	background-color: #0f82a9;
+	background-color: rgba(114,139,157,.5);
 	position: relative;
 	top: 0;
 	left: 0;
+	width: 6px;
+	border-radius: 3px;
 	cursor: pointer;
 }
 
 .jspHorizontalBar .jspTrack,
-.jspHorizontalBar .jspDrag
-{
+.jspHorizontalBar .jspDrag {
 	float: left;
 	height: 100%;
 }
 
-.jspArrow
-{
+.jspArrow {
 	background: #50506d;
 	text-indent: -20000px;
 	display: block;
@@ -85,38 +80,34 @@
 	margin: 0;
 }
 
-.jspArrow.jspDisabled
-{
+.jspArrow.jspDisabled {
 	cursor: default;
 	background: #80808d;
 }
 
-.jspVerticalBar .jspArrow
-{
+.jspVerticalBar .jspArrow {
 	height: 17px;
 }
 
-.jspHorizontalBar .jspArrow
-{
+.jspHorizontalBar .jspArrow {
 	width: 17px;
 	float: left;
 	height: 100%;
 }
 
-.jspVerticalBar .jspArrow:focus
-{
+.jspVerticalBar .jspArrow:focus {
 	outline: none;
 }
 
-.jspCorner
-{
+.jspCorner {
 	background: #eeeef4;
 	float: left;
 	height: 100%;
 }
 
+
 /* Yuk! CSS Hack for IE6 3 pixel bug :( */
-* html .jspCorner
-{
+
+* html .jspCorner {
 	margin: 0 -3px 0 0;
 }

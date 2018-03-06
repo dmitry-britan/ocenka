@@ -1,9 +1,27 @@
--var text = ['Через заявку на сайте','Отправить фото в Viber, Telegram, WatsApp','Предварительная оценка по телефону','Встреча в офисе в рабочее время или по договоренности'];
+-
+	var items = [
+		{
+			link: 'section--feedback',
+			text: 'Через заявку на сайте'
+		},
+		{
+			link: 'section--feedback',
+			text: 'Отправить фото в Viber, Telegram, WatsApp'
+		},
+		{
+			link: 'section--feedback',
+			text: 'Предварительная оценка по телефону'
+		},
+		{
+			link: 'section--feedback',
+			text: 'Встреча в офисе в рабочее время или по договоренности'
+		}
+	];
 .row
-	each i in [0, 1, 2, 3]
+	each item, index in items
 		.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
-			.how
+			.how.js-how-item
 				.how__inner
 					a(href="").how__icon
-						img(src="images/how-we-works/p-"+(i+1)+".png", alt="")
-					p.how__text= text[i]
+						img(src="images/how-we-works/p-"+(index+1)+".png", alt="")
+					p.how__text= item.text

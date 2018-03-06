@@ -282,6 +282,35 @@ if ($gallery.length) {
 //
 // Раскрытие/скрытие элементов
 // =================================================================
-$('.js-more-testimonials').on('click', () => {
-	$('.js-testimonials-wrapper').toggleClass('is--opened');
+$('.js-more-testimonials').on('click', (event) => {
+	event.preventDefault();
+	let $testimonials = $('.js-testimonials-wrapper');
+	let $btn = $(event.currentTarget);
+
+	if ($testimonials.hasClass('is--opened')) {
+		$('#ask').arcticmodal();
+	} else {
+		$testimonials.addClass('is--opened');
+		$btn.text('Задать вопрос');
+	}
 });
+
+//
+// Раскрытие/скрытие элементов
+// =================================================================
+$('.js-how-item').on('click', (event) => {
+	event.preventDefault();
+	let $feedbackSection = $('.section--feedback');
+	let top = $feedbackSection.offset().top - 80;
+
+	$('html, body').animate({scrollTop: top}, 1000);
+});
+
+//
+// Scroll pane Init
+// =================================================================
+let $scrollable = $('.js-scroll-pane');
+
+if ($scrollable.length) {
+	$scrollable.jScrollPane();
+}

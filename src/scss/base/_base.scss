@@ -11,6 +11,9 @@ body{
   padding-top: 88px;
   font-family: $font-family;
 }
+img{
+  max-width: 100%;
+}
 .container{
   min-width: 320px;
   // max-width: 1170px;
