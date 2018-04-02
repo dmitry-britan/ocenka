@@ -175,13 +175,12 @@
 	}
 }
 .section__text{
-	max-width: 800px;
-	margin: 0 auto 55px;
+	padding: 0 15px;
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 21px;
+	text-align: justify;
 	color: #728b9d;
-	text-align: center;
 }
 .section__header + .section__text {
 	margin-top: -40px;
