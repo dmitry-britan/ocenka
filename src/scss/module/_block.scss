@@ -1,6 +1,9 @@
 .block{
 	&.is--mb{
 		margin-bottom: 70px;
+		@include media('<600px'){
+			margin-bottom: 35px;
+		}
 	}
 	
 	@include media('<992px'){
@@ -25,6 +28,9 @@
 		@include media('<768px'){
 			font-size: 24px;
 			line-height: 24px;
+		}
+		@include media('<600px'){
+			margin-bottom: 16px;
 		}
 	}
 }
@@ -72,6 +78,12 @@
 
 	&.is--margin{
 		margin: 43px 0 51px;
+		@include media('<600px'){
+			margin: 20px 0 30px;
+		}
+	}
+	@include media('<600px'){
+		text-align: justify;
 	}
 }
 .block__text--estimate{

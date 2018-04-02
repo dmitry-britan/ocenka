@@ -15,6 +15,9 @@
 	@include media('<1330px'){
 		background-size: cover;
 	}
+	@include media('<600px'){
+		padding-top: 40px;
+	}
 }
 .section--estimate{
 	position: relative;
@@ -32,12 +35,18 @@
 			text-align: center;
 		}
 	}
+	@include media('<600px'){
+		padding: 40px 0;
+	}
 }
 
 .section--why{
 	position: relative;
 	padding-top: 112px;
 	padding-bottom: 20px;
+	@include media('<600px'){
+		padding: 40px 0;
+	}
 	.container{
 		position: relative;
 		z-index: 10;
@@ -54,15 +63,24 @@
 .section--bg-1{
 	@extend .section--why;
 	padding: 60px 0 30px;
+	@include media('<600px'){
+		padding: 40px 0;
+	}
 }
 .section--testimonials{
 	padding-top: 69px;
+	@include media('<600px'){
+		padding: 40px 0;
+	}
 }
 .section--how-we-works{
 	position: relative;
 	padding-top: 39px;
 	padding-bottom: 106px;
 	box-shadow: 0 10px 16px 1px rgba(43, 96, 114, 0.41);
+	@include media('<600px'){
+		padding: 40px 0;
+	}
 	z-index: 5;
 	.container{
 		position: relative;
@@ -88,10 +106,16 @@
 .section--works{
 	padding-top: 56px;
 	padding-bottom: 0;
+	@include media('<600px'){
+		padding: 40px 0 20px;
+	}
 }
 .section--feedback{
 	padding-top: 56px;
 	padding-bottom: 0;
+	@include media('<600px'){
+		padding: 40px 0 20px;
+	}
 }
 .section__header{
 	position: relative;
@@ -175,12 +199,16 @@
 	}
 }
 .section__text{
-	padding: 0 15px;
+	max-width: 800px;
+	margin: 0 auto 55px;
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 21px;
-	text-align: justify;
 	color: #728b9d;
+	text-align: center;
+	@include media('<992px'){
+		text-align: justify;
+	}
 }
 .section__header + .section__text {
 	margin-top: -40px;
