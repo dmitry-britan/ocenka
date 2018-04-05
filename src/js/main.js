@@ -233,6 +233,24 @@ $('.js--ask-form').validate({
 	},
 	focusCleanup: true,
 	focusInvalid: false,
+	submitHandler: (form) => {
+		let uploadedFiles = false;
+
+		$(form).find('.form__upload-file').each((index, element) => {
+			uploadedFiles = element.value ? true : uploadedFiles;
+		});
+
+		if (uploadedFiles) {
+			form.submit();
+		}
+
+		let message = 'Выберите файл';
+
+		$(form).find('.form__text').before(`<div class="error error--fileupload">${message}</div>`);
+		$(form).find('.form__upload-file').eq(0).next().addClass('error');
+
+		return false;
+	},
 });
 
 //
@@ -251,10 +269,46 @@ let valuationValidateSettings = {
 	},
 	focusCleanup: true,
 	focusInvalid: false,
+	submitHandler: (form) => {
+		let uploadedFiles = false;
+
+		$(form).find('.valuation__upload-file').each((index, element) => {
+			uploadedFiles = element.value ? true : uploadedFiles;
+		});
+
+		if (uploadedFiles) {
+			form.submit();
+		}
+
+		let message = 'Выберите файл';
+
+		if ($(form).find('.error--fileupload').length) {
+			return false;
+		}
+
+		$(form).find('.valuation__step').eq(0).find('.valuation__step-title').after(`<div class="error error--fileupload">${message}</div>`);
+		$(form).find('.valuation__upload-file').eq(0).next().addClass('error error--fileupload');
+
+		return false;
+	},
+};
+let callbackValidateSettings = {
+	rules: {
+		phone: {
+			required: true,
+		},
+	},
+	messages: {
+		phone: {
+			required: 'Введите номер телефона',
+		},
+	},
+	focusCleanup: true,
+	focusInvalid: false,
 };
 
 // CALLBACK FORM
-$('.js--callback-form').validate(valuationValidateSettings);
+$('.js--callback-form').validate(callbackValidateSettings);
 
 // SIDEBAR FORM
 $('.js-valuation-form').validate(valuationValidateSettings);

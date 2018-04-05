@@ -80,7 +80,7 @@ textarea{
   }
 	@include media('<640px'){
 		overflow: hidden;
-	}
+  }
 }
 .form__alarm{
   position: relative;

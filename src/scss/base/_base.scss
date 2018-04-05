@@ -17,6 +17,15 @@ body{
 img{
   max-width: 100%;
 }
+label.error,
+.error{
+  color: red;
+  &.error--fileupload{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
 .container{
   min-width: 320px;
   max-width: 1190px;
