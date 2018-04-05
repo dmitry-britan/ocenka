@@ -333,6 +333,10 @@ textarea{
 }
 .form__upload-label{
   @extend .valuation__upload-label;
+
+  &.error{
+    text-align: center;
+  }
 }
 
 

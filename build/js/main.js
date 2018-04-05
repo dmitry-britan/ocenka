@@ -287,12 +287,12 @@ $('.js--ask-form').validate({
 
 		if (uploadedFiles) {
 			form.submit();
+		} else {
+			var message = 'Выберите файл';
+
+			$(form).find('.form__text').before('<div class="error error--fileupload">' + message + '</div>');
+			$(form).find('.form__upload-file').eq(0).next().addClass('error');
 		}
-
-		var message = 'Выберите файл';
-
-		$(form).find('.form__text').before('<div class="error error--fileupload">' + message + '</div>');
-		$(form).find('.form__upload-file').eq(0).next().addClass('error');
 
 		return false;
 	}
@@ -323,17 +323,16 @@ var valuationValidateSettings = {
 
 		if (uploadedFiles) {
 			form.submit();
+		} else {
+			var message = 'Выберите файл';
+
+			if ($(form).find('.error--fileupload').length) {
+				return false;
+			}
+
+			$(form).find('.valuation__step').eq(0).find('.valuation__step-title').after('<div class="error error--fileupload">' + message + '</div>');
+			$(form).find('.valuation__upload-file').eq(0).next().addClass('error error--fileupload');
 		}
-
-		var message = 'Выберите файл';
-
-		if ($(form).find('.error--fileupload').length) {
-			return false;
-		}
-
-		$(form).find('.valuation__step').eq(0).find('.valuation__step-title').after('<div class="error error--fileupload">' + message + '</div>');
-		$(form).find('.valuation__upload-file').eq(0).next().addClass('error error--fileupload');
-
 		return false;
 	}
 };
