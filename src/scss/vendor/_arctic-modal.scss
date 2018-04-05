@@ -26,9 +26,15 @@
 	text-transform: uppercase;
 	text-align: center;
 	color: #000;
+	@include media('<640px'){
+		padding: 18px 25px;
+	}
 }
 .arcticmodal-body{
 	padding: 22px 50px;
+	@include media('<640px'){
+		padding: 18px 15px;
+	}
 }
 .arcticmodal-footer{
 	padding: 15px 50px 35px;
@@ -61,6 +67,9 @@
 	margin: 0;
 	border: 0;
 	vertical-align: middle;
+	@include media('<640px'){
+		padding: 18px 10px;
+	}
 }
 .arcticmodal-error { 
 	padding: 20px;

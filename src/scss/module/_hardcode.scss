@@ -1,0 +1,12 @@
+#ask {
+	.arcticmodal-body{
+		@include media('<640px'){
+			padding: 18px 15px;
+		}
+	}
+	.col.col--6-of-12{
+		@include media('<640px'){
+			width: 100%;
+		}
+	}
+}

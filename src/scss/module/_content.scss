@@ -5,6 +5,11 @@
 	@include media('<768px'){
 		padding: 20px 30px;
 	}
+	&.is--have-prev{
+		@include media('<640px'){
+			padding: 18px 15px;
+		}
+	}
 	&.is--gray{
 		background-color: #fafafa;
 	}

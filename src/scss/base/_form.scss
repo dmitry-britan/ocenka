@@ -78,6 +78,9 @@ textarea{
   @include note {
     width: 100%;
   }
+	@include media('<640px'){
+		overflow: hidden;
+	}
 }
 .form__alarm{
   position: relative;

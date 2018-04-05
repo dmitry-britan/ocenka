@@ -7,6 +7,9 @@
 	background: #fff;
 	box-shadow: 0 4px 9px rgba(39, 42, 59, 0.1);
 	z-index: 50;
+	@include media('<992px'){
+		position: static;
+	}
 }
 .header__inner{
 	max-width: 1860px;
