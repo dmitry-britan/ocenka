@@ -7,30 +7,31 @@
 	background: #fff;
 	box-shadow: 0 4px 9px rgba(39, 42, 59, 0.1);
 	z-index: 50;
-	@include media('<992px'){
+	@include media('<1100px'){
 		position: static;
+		height: auto;
+		min-height: 88px;
+	}
+	@include media('<480px'){
+		min-height: 65px;
+		padding: 15px 0;
 	}
 }
 .header__inner{
 	max-width: 1860px;
 	margin: 0 auto;
-	// display: flex;
-	// flex-direction: row;
 	@include media('<1250px'){
 		text-align: center;
 	}
 
 	& > div {
 		display: inline-block;
-		// margin-right: -0.25em;
 		vertical-align: top;
 		margin-right: 0;
 		transition: width, padding, 250ms linear;
 	}
 }
 .header__logo{
-	// padding-right: 97px;
-	// padding-left: 110px;
 	padding-left: percentage(110/1860);
 	padding-right: percentage(97/1860);
 	@include media('<1860px'){
@@ -51,12 +52,10 @@
 	}
 	@include media('<390px'){
 		padding-right: 10px;
-		max-width: 150px;
+		max-width: 110px;
 	}
 }
 .header__search{
-	// width: 647px;
-	// padding-right: 99px;
 	width: percentage(597/1860);
 	padding-right: percentage(49/1860);
 	margin-top: -6px;
@@ -102,6 +101,9 @@
 	margin-top: -6px;
 	@include media('<550px'){
 		float: right;
+		padding-right: 15px;
+	}
+	@include media('<390px'){
 		padding-right: 10px;
 	}
 }
@@ -116,8 +118,8 @@
 	}
 	@include media('<550px'){
 		float: left;
-		padding-left: 40px;
-		padding-right: 20px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	@include media('<390px'){
 		padding-left: 10px;

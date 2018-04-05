@@ -10,7 +10,7 @@ html {
 body{
   padding-top: 88px;
   font-family: $font-family;
-	@include media('<992px'){
+	@include media('<1100px'){
 		padding: 0;
 	}
 }

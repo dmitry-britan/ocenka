@@ -1,12 +1,19 @@
-.social{}
+.social{
+	display: flex;
+	justify-content: flex-end;
+}
 .social__link{
 	display: inline-block;
+	max-height: 43px;
 	margin-right: 12px;
 	margin-bottom: 10px;
 	border-radius: 12px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	color: #ffffff;
 	transition: all 300ms linear;
+	@include media('<640px'){
+		margin-right: 6px;
+	}
 	&:hover{
 		transform: translateY(-2px);
 		box-shadow: 0 4px 8px rgba(#000, .3);
@@ -31,7 +38,6 @@
 		text-align: left;
 	}
 }
-.social__telegram,
 .social__mail{
 	@include media('<550px'){
 		display: none;
