@@ -13,6 +13,12 @@ body{
 	@include media('<1100px'){
 		padding: 0;
 	}
+	@include media('<640px'){
+    padding-top: 88px;
+	}
+	@include media('<480px'){
+    padding-top: 65px;
+	}
 }
 img{
   max-width: 100%;

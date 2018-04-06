@@ -12,9 +12,13 @@
 		height: auto;
 		min-height: 88px;
 	}
+	@include media('<640px'){
+		position: fixed;
+		min-height: 88px;
+	}
 	@include media('<480px'){
 		min-height: 65px;
-		padding: 15px 0;
+		padding: 15px 0 0;
 	}
 }
 .header__inner{
