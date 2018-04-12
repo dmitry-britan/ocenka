@@ -52,6 +52,10 @@
   text-transform: uppercase;
   text-align: center;
   color: $color__secondary;
+  @include media('<480px'){
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   span{
     display: block;
     font-size: 20px;
