@@ -7,8 +7,17 @@
 		@include sprite('mail-hover');
 	}
 }
+.icon-email{
+	@include sprite('email');
+}
+.icon-phone{
+	@include sprite('phone');
+}
 .icon-viber{
 	@include sprite('viber');
+}
+.icon-viber-left{
+	@include sprite('viber-left');
 }
 .icon-telegram{
 	@include sprite('telegram');

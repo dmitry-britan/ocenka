@@ -34,7 +34,9 @@
 	color: #69a5ba;
 	transition: all 250ms linear;
 	&:hover{
-		color: darken(#69a5ba, 5%);
+		border: 1px solid darken(#69a5ba, 5%);
+		background: darken(#69a5ba, 5%);
+		color: #fff;
 	}
 }
 .btn-primary{

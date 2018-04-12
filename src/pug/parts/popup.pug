@@ -19,3 +19,28 @@ div(style='display:none')
 		.arcticmodal-body
 			include callback-form.pug
 	// /Callback form 
+
+	// Communication popup
+	#communication.arcticmodal.box-modal.is--communication
+		.arcticmodal-title
+			span Получить консультацию
+			| Бесплатно!
+		.arcticmodal-body
+			.communication
+				ul.communication__list
+					li.communication__item
+						a(href="tel:").communication__link.is--phone
+							i.icon.icon-phone
+							| по телефону
+					li.communication__item
+						a(href="viber:://add?number=").communication__link.is--viber
+							i.icon.icon-viber-left
+							| через Viber
+					li.communication__item
+						a(href="mailto:").communication__link.is--email
+							i.icon.icon-email
+							| через e-mail
+		.arcticmodal-footer
+			a(href="").arcticmodal-close.is--close-btn.btn.btn-bordered.btn-bordered--alt.js--close-communication-popup
+				| Закрыть
+	// /Communication popup

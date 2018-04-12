@@ -417,3 +417,77 @@ var $scrollable = $('.js-scroll-pane');
 if ($scrollable.length) {
 	$scrollable.jScrollPane();
 }
+
+//
+// Communication Popup
+// =================================================================
+var $popupCommunication = $('#communication');
+var timer = parseInt($.cookie('popupTimer'), 10) || 0;
+var visits = parseInt($.cookie('popupVisits'), 10) || 0;
+var showPopupAllow = $.cookie('popupAllow') || 'yes';
+var showPopupFirstTime = 10000;
+var showPopupPage = 4;
+
+function resetTimerCookie() {
+	timer = 0;
+	$.removeCookie('popupTimer');
+	$.cookie('popupTimer', 0);
+}
+
+function resetVisitsCookie() {
+	visits = 0;
+	$.removeCookie('popupVisits');
+	$.cookie('popupVisits', 0);
+}
+
+function popupAllow() {
+	showPopupAllow = 'yes';
+	$.cookie('popupAllow', 'yes');
+}
+
+function popupDisallow() {
+	showPopupAllow = 'no';
+	$.cookie('popupAllow', 'no');
+}
+
+// Увеличиваем количество просмотренных страниц
+$.cookie('popupVisits', ++visits);
+if (visits >= showPopupPage) {
+	resetVisitsCookie();
+	popupAllow();
+}
+// console.log('visits', visits);
+// console.log('allow', showPopupAllow);
+
+// Показывваем попап первый раз через showPopupFirstTime мс
+var timerIncriment = setInterval(function() {
+	timer += 1000;
+	$.cookie('popupTimer', timer);
+
+	// если время пришло, показывваем попап
+	if (timer === showPopupFirstTime && showPopupAllow === 'yes') {
+		$popupCommunication.arcticmodal();
+	}
+
+	// сбрасываем таймер на ноль
+	if (timer > showPopupFirstTime) {
+		resetTimerCookie();
+	}
+
+	// console.log(parseInt($.cookie('popupTimer'), 10));
+}, 1000);
+
+$(document).mouseleave(function(e) {
+	if (e.clientY <= 0) {
+		$popupCommunication.arcticmodal();
+		resetTimerCookie();
+	}
+});
+
+// сбрасываем таймер при закрытии попапа
+$('.js--close-communication-popup').on('click', function() {
+	resetTimerCookie();
+	resetVisitsCookie();
+	popupDisallow();
+	clearInterval(timerIncriment);
+});
