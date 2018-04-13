@@ -474,7 +474,9 @@ function popupDisallow() {
 }
 
 // Увеличиваем количество просмотренных страниц
-$.cookie('popupVisits', ++visits);
+$.cookie('popupVisits', ++visits, {
+	path: '/'
+});
 if (visits >= showPopupPage) {
 	resetVisitsCookie();
 	resetTimerCookie();
