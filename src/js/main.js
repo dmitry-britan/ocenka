@@ -378,28 +378,30 @@ let $popupCommunication = $('#communication');
 let timer = parseInt($.cookie('popupTimer'), 10) || 0;
 let visits = parseInt($.cookie('popupVisits'), 10) || 0;
 let showPopupAllow = $.cookie('popupAllow') || 'yes';
-let showPopupFirstTime = 10000;
+let showPopupFirstTime = 7000;
 let showPopupPage = 4;
 
 function resetTimerCookie() {
 	timer = 0;
 	$.removeCookie('popupTimer');
-	$.cookie('popupTimer', 0);
+	$.cookie('popupTimer', 0, {path: '/'});
 }
 
 function resetVisitsCookie() {
 	visits = 0;
 	$.removeCookie('popupVisits');
-	$.cookie('popupVisits', 0);
+	$.cookie('popupVisits', 0, {path: '/'});
 }
 
 function popupAllow() {
 	showPopupAllow = 'yes';
-	$.cookie('popupAllow', 'yes');
+	$.removeCookie('popupAllow');
+	$.cookie('popupAllow', 'yes', {path: '/'});
 }
 function popupDisallow() {
 	showPopupAllow = 'no';
-	$.cookie('popupAllow', 'no');
+	$.removeCookie('popupAllow');
+	$.cookie('popupAllow', 'no', {path: '/'});
 }
 
 // Увеличиваем количество просмотренных страниц
@@ -414,7 +416,8 @@ if (visits >= showPopupPage) {
 // Показывваем попап первый раз через showPopupFirstTime мс
 let timerIncriment = setInterval(() => {
 	timer += 1000;
-	$.cookie('popupTimer', timer);
+	$.removeCookie('popupTimer');
+	$.cookie('popupTimer', timer, {path: '/'});
 
 	// если время пришло, показывваем попап
 	if (timer === showPopupFirstTime && showPopupAllow === 'yes') {
