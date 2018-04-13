@@ -427,68 +427,86 @@ var visits = parseInt($.cookie('popupVisits'), 10) || 0;
 var showPopupAllow = $.cookie('popupAllow') || 'yes';
 var showPopupFirstTime = 7000;
 var showPopupPage = 4;
+var timerIncriment = void 0;
 
 function resetTimerCookie() {
 	timer = 0;
-	$.removeCookie('popupTimer');
+	$.removeCookie('popupTimer', {
+		path: '/'
+	});
 	$.cookie('popupTimer', 0, {
 		path: '/'
 	});
+	console.log('resetTimerCookie');
 }
 
 function resetVisitsCookie() {
 	visits = 0;
-	$.removeCookie('popupVisits');
+	$.removeCookie('popupVisits', {
+		path: '/'
+	});
 	$.cookie('popupVisits', 0, {
 		path: '/'
 	});
+	console.log('resetVisitsCookie');
 }
 
 function popupAllow() {
 	showPopupAllow = 'yes';
-	$.removeCookie('popupAllow');
+	$.removeCookie('popupAllow', {
+		path: '/'
+	});
 	$.cookie('popupAllow', 'yes', {
 		path: '/'
 	});
+	console.log('popupAllow');
 }
 
 function popupDisallow() {
 	showPopupAllow = 'no';
-	$.removeCookie('popupAllow');
+	$.removeCookie('popupAllow', {
+		path: '/'
+	});
 	$.cookie('popupAllow', 'no', {
 		path: '/'
 	});
+	console.log('popupDisallow');
 }
 
 // Увеличиваем количество просмотренных страниц
 $.cookie('popupVisits', ++visits);
 if (visits >= showPopupPage) {
 	resetVisitsCookie();
+	resetTimerCookie();
 	popupAllow();
 }
-// console.log('visits', visits);
-// console.log('allow', showPopupAllow);
+console.log('visits', visits);
+console.log('allow', showPopupAllow);
 
-// Показывваем попап первый раз через showPopupFirstTime мс
-var timerIncriment = setInterval(function() {
-	timer += 1000;
-	$.removeCookie('popupTimer');
-	$.cookie('popupTimer', timer, {
-		path: '/'
-	});
+if (showPopupAllow === 'yes') {
+	// Показывваем попап первый раз через showPopupFirstTime мс
+	timerIncriment = setInterval(function() {
+		timer += 1000;
+		$.removeCookie('popupTimer', {
+			path: '/'
+		});
+		$.cookie('popupTimer', timer, {
+			path: '/'
+		});
 
-	// если время пришло, показывваем попап
-	if (timer === showPopupFirstTime && showPopupAllow === 'yes') {
-		$popupCommunication.arcticmodal();
-	}
+		// если время пришло, показывваем попап
+		if (timer === showPopupFirstTime) {
+			$popupCommunication.arcticmodal();
+		}
 
-	// сбрасываем таймер на ноль
-	if (timer > showPopupFirstTime) {
-		resetTimerCookie();
-	}
+		// сбрасываем таймер на ноль
+		if (timer > showPopupFirstTime) {
+			resetTimerCookie();
+		}
 
-	// console.log(parseInt($.cookie('popupTimer'), 10));
-}, 1000);
+		console.log(parseInt($.cookie('popupTimer'), 10));
+	}, 1000);
+}
 
 $(document).mouseleave(function(e) {
 	if (e.clientY <= 0) {
@@ -498,7 +516,10 @@ $(document).mouseleave(function(e) {
 });
 
 // сбрасываем таймер при закрытии попапа
-$('.js--close-communication-popup').on('click', function() {
+$('.js--close-communication-popup').on('click', function(event) {
+	event.preventDefault();
+	$popupCommunication.arcticmodal('close');
+
 	resetTimerCookie();
 	resetVisitsCookie();
 	popupDisallow();

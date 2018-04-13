@@ -380,57 +380,65 @@ let visits = parseInt($.cookie('popupVisits'), 10) || 0;
 let showPopupAllow = $.cookie('popupAllow') || 'yes';
 let showPopupFirstTime = 7000;
 let showPopupPage = 4;
+let timerIncriment;
 
 function resetTimerCookie() {
 	timer = 0;
-	$.removeCookie('popupTimer');
+	$.removeCookie('popupTimer', {path: '/'});
 	$.cookie('popupTimer', 0, {path: '/'});
+	console.log('resetTimerCookie');
 }
 
 function resetVisitsCookie() {
 	visits = 0;
-	$.removeCookie('popupVisits');
+	$.removeCookie('popupVisits', {path: '/'});
 	$.cookie('popupVisits', 0, {path: '/'});
+	console.log('resetVisitsCookie');
 }
 
 function popupAllow() {
 	showPopupAllow = 'yes';
-	$.removeCookie('popupAllow');
+	$.removeCookie('popupAllow', {path: '/'});
 	$.cookie('popupAllow', 'yes', {path: '/'});
+	console.log('popupAllow');
 }
 function popupDisallow() {
 	showPopupAllow = 'no';
-	$.removeCookie('popupAllow');
+	$.removeCookie('popupAllow', {path: '/'});
 	$.cookie('popupAllow', 'no', {path: '/'});
+	console.log('popupDisallow');
 }
 
 // Увеличиваем количество просмотренных страниц
 $.cookie('popupVisits', ++visits);
 if (visits >= showPopupPage) {
 	resetVisitsCookie();
+	resetTimerCookie();
 	popupAllow();
 }
-// console.log('visits', visits);
-// console.log('allow', showPopupAllow);
+console.log('visits', visits);
+console.log('allow', showPopupAllow);
 
-// Показывваем попап первый раз через showPopupFirstTime мс
-let timerIncriment = setInterval(() => {
-	timer += 1000;
-	$.removeCookie('popupTimer');
-	$.cookie('popupTimer', timer, {path: '/'});
+if (showPopupAllow === 'yes') {
+	// Показывваем попап первый раз через showPopupFirstTime мс
+	timerIncriment = setInterval(() => {
+		timer += 1000;
+		$.removeCookie('popupTimer', {path: '/'});
+		$.cookie('popupTimer', timer, {path: '/'});
 
-	// если время пришло, показывваем попап
-	if (timer === showPopupFirstTime && showPopupAllow === 'yes') {
-		$popupCommunication.arcticmodal();
-	}
+		// если время пришло, показывваем попап
+		if (timer === showPopupFirstTime) {
+			$popupCommunication.arcticmodal();
+		}
 
-	// сбрасываем таймер на ноль
-	if (timer > showPopupFirstTime) {
-		resetTimerCookie();
-	}
+		// сбрасываем таймер на ноль
+		if (timer > showPopupFirstTime) {
+			resetTimerCookie();
+		}
 
-	// console.log(parseInt($.cookie('popupTimer'), 10));
-}, 1000);
+		console.log(parseInt($.cookie('popupTimer'), 10));
+	}, 1000);
+}
 
 $(document).mouseleave((e) => {
 	if (e.clientY <= 0) {
@@ -440,7 +448,10 @@ $(document).mouseleave((e) => {
 });
 
 // сбрасываем таймер при закрытии попапа
-$('.js--close-communication-popup').on('click', () => {
+$('.js--close-communication-popup').on('click', (event) => {
+	event.preventDefault();
+	$popupCommunication.arcticmodal('close');
+
 	resetTimerCookie();
 	resetVisitsCookie();
 	popupDisallow();
